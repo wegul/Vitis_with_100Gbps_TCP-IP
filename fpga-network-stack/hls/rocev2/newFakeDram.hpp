@@ -44,6 +44,7 @@ public:
 			delete chunks[i]->data;
 			delete chunks[i];
 		}*/
+		return 0;
 	}
 
 	unsigned char* createChunk(uint64_t size)
