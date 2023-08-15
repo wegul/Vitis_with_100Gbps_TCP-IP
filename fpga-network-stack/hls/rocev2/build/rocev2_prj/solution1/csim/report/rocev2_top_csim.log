@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[4]: Entering directory '/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/csim/build'
+   Compiling ../../../../../test_rocev2.cpp in debug mode
+   Compiling ../../../../../rocev2.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/msn_table.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/conn_table.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/state_table.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/transport_timer.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/read_req_table.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp in debug mode
+   Compiling ../../../../../../ib_transport_protocol/ib_utils.cpp in debug mode
+   Compiling ../../../../../../udp/udp.cpp in debug mode
+   Compiling ../../../../../../ipv6/ipv6.cpp in debug mode
+   Compiling ../../../../../../ipv4/ipv4.cpp in debug mode
+   Compiling ../../../../../../ipv4/ipv4_utils.cpp in debug mode
+   Compiling ../../../../../../axi_utils.cpp in debug mode
+   Generating csim.exe
+make[4]: Leaving directory '/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/csim/build'
+ip addressd1 d4 01 0b ff 53 0f 02 00 00 00 00 00 00 80 fe 
+rev addressfe 80 00 00 00 00 00 00 02 0f 53 ff 0b 01 d4 d1 
+[ERROR] could not open test rx input file.
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

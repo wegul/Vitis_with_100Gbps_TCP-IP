@@ -1,0 +1,28 @@
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:226:3: warning: '/*' within block comment [-Wcomment]
+                /*case RELEASE:
+                ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:257:3: warning: '/*' within block comment [-Wcomment]
+                /*case RETRANS_0:
+                ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:357:6: warning: '/*' within block comment [-Wcomment]
+                                        /*if (!entry.valid || entry.isTail)
+                                        ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:375:2: warning: '/*' within block comment [-Wcomment]
+        /*switch (rmt_state)
+        ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:398:6: warning: '/*' within block comment [-Wcomment]
+                                        /*if (!entry.valid || entry.isTail)
+                                        ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:422:4: warning: '/*' within block comment [-Wcomment]
+                        /*isEnd = (!entry.valid || entry.psn == checkPsn || entry.isTail);
+                        ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:430:2: warning: '/*' within block comment [-Wcomment]
+        /*case IMD:
+        ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:431:3: warning: '/*' within block comment [-Wcomment]
+                /*if (isEnd)
+                ^
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp:441:2: warning: '/*' within block comment [-Wcomment]
+        /*case CONTINOUS_2:
+        ^
+9 warnings generated.

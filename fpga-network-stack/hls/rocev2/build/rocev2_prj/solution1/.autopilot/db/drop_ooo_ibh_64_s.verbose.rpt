@@ -1,0 +1,811 @@
+
+
+================================================================
+== Vitis HLS Report for 'drop_ooo_ibh_64_s'
+================================================================
+* Date:           Tue Aug 15 18:30:14 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  3.674 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      23|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      45|    -|
+|Register         |        -|     -|     136|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     136|      68|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2940|  3600|  866400|  433200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op20_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op29_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op38_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op43_write_state2    |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_42_p3            |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_56_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |select_ln469_fu_101_p3            |    select|   0|  0|   3|           1|           3|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  23|          11|          12|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done                   |   9|          2|    1|          2|
+    |rx_exh2dropFifo_blk_n     |   9|          2|    1|          2|
+    |rx_ibhDrop2exhFifo_blk_n  |   9|          2|    1|          2|
+    |rx_ibhDropFifo_blk_n      |   9|          2|    1|          2|
+    |state_5                   |   9|          2|    2|          4|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  45|         10|    6|         12|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+-----+----+-----+-----------+
+    |              Name              |  FF | LUT| Bits| Const Bits|
+    +--------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                       |    1|   0|    1|          0|
+    |ap_done_reg                     |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1         |    1|   0|    1|          0|
+    |rx_exh2dropFifo_read_1_reg_123  |  128|   0|  128|          0|
+    |state_5                         |    2|   0|    2|          0|
+    |state_5_load_reg_115            |    2|   0|    2|          0|
+    |tmp_i_266_reg_119               |    1|   0|    1|          0|
+    +--------------------------------+-----+----+-----+-----------+
+    |Total                           |  136|   0|  136|          0|
+    +--------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|    drop_ooo_ibh<64>|  return value|
+|rx_exh2dropFifo_dout               |   in|  128|     ap_fifo|     rx_exh2dropFifo|       pointer|
+|rx_exh2dropFifo_num_data_valid     |   in|    6|     ap_fifo|     rx_exh2dropFifo|       pointer|
+|rx_exh2dropFifo_fifo_cap           |   in|    6|     ap_fifo|     rx_exh2dropFifo|       pointer|
+|rx_exh2dropFifo_empty_n            |   in|    1|     ap_fifo|     rx_exh2dropFifo|       pointer|
+|rx_exh2dropFifo_read               |  out|    1|     ap_fifo|     rx_exh2dropFifo|       pointer|
+|rx_ibhDropFifo_dout                |   in|    1|     ap_fifo|      rx_ibhDropFifo|       pointer|
+|rx_ibhDropFifo_num_data_valid      |   in|    2|     ap_fifo|      rx_ibhDropFifo|       pointer|
+|rx_ibhDropFifo_fifo_cap            |   in|    2|     ap_fifo|      rx_ibhDropFifo|       pointer|
+|rx_ibhDropFifo_empty_n             |   in|    1|     ap_fifo|      rx_ibhDropFifo|       pointer|
+|rx_ibhDropFifo_read                |  out|    1|     ap_fifo|      rx_ibhDropFifo|       pointer|
+|rx_ibhDrop2exhFifo_din             |  out|  128|     ap_fifo|  rx_ibhDrop2exhFifo|       pointer|
+|rx_ibhDrop2exhFifo_num_data_valid  |   in|    6|     ap_fifo|  rx_ibhDrop2exhFifo|       pointer|
+|rx_ibhDrop2exhFifo_fifo_cap        |   in|    6|     ap_fifo|  rx_ibhDrop2exhFifo|       pointer|
+|rx_ibhDrop2exhFifo_full_n          |   in|    1|     ap_fifo|  rx_ibhDrop2exhFifo|       pointer|
+|rx_ibhDrop2exhFifo_write           |  out|    1|     ap_fifo|  rx_ibhDrop2exhFifo|       pointer|
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.67>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_exh2dropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_exh2dropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_exh2dropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_ibhDrop2exhFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_ibhDrop2exhFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_ibhDrop2exhFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rx_ibhDropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rx_ibhDropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rx_ibhDropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_ibhDrop2exhFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rx_ibhDropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %rx_exh2dropFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln445 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_6" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:445]   --->   Operation 15 'specpipeline' 'specpipeline_ln445' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%state_5_load = load i2 %state_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:463]   --->   Operation 16 'load' 'state_5_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.48ns)   --->   "%switch_ln463 = switch i2 %state_5_load, void %sw.bb.i, i2 2, void %sw.bb10.i, i2 1, void %sw.bb3.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:463]   --->   Operation 17 'switch' 'switch_ln463' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_i_266 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i128P0A, i128 %rx_exh2dropFifo, i32 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:480]   --->   Operation 18 'nbreadreq' 'tmp_i_266' <Predicate = (state_5_load == 1)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 32> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln480 = br i1 %tmp_i_266, void %if.end9.i, void %if.then5.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:480]   --->   Operation 19 'br' 'br_ln480' <Predicate = (state_5_load == 1)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.33ns)   --->   "%rx_exh2dropFifo_read_1 = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %rx_exh2dropFifo" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:482]   --->   Operation 20 'read' 'rx_exh2dropFifo_read_1' <Predicate = (state_5_load == 1 & tmp_i_266)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 32> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%currWord_last_V_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %rx_exh2dropFifo_read_1, i128 72" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:482]   --->   Operation 21 'bitselect' 'currWord_last_V_22' <Predicate = (state_5_load == 1 & tmp_i_266)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln484 = br i1 %currWord_last_V_22, void %if.end8.i, void %if.then7.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:484]   --->   Operation 22 'br' 'br_ln484' <Predicate = (state_5_load == 1 & tmp_i_266)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.84ns)   --->   "%store_ln486 = store i2 0, i2 %state_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:486]   --->   Operation 23 'store' 'store_ln486' <Predicate = (state_5_load == 1 & tmp_i_266 & currWord_last_V_22)> <Delay = 0.84>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln487 = br void %if.end8.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:487]   --->   Operation 24 'br' 'br_ln487' <Predicate = (state_5_load == 1 & tmp_i_266 & currWord_last_V_22)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln488 = br void %if.end9.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:488]   --->   Operation 25 'br' 'br_ln488' <Predicate = (state_5_load == 1 & tmp_i_266)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln489 = br void %drop_ooo_ibh<64>.exit" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:489]   --->   Operation 26 'br' 'br_ln489' <Predicate = (state_5_load == 1)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_264_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i128P0A, i128 %rx_exh2dropFifo, i32 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:491]   --->   Operation 27 'nbreadreq' 'tmp_264_i' <Predicate = (state_5_load == 2)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 32> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln491 = br i1 %tmp_264_i, void %if.end18.i, void %if.then12.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:491]   --->   Operation 28 'br' 'br_ln491' <Predicate = (state_5_load == 2)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (2.33ns)   --->   "%rx_exh2dropFifo_read = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %rx_exh2dropFifo" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:493]   --->   Operation 29 'read' 'rx_exh2dropFifo_read' <Predicate = (state_5_load == 2 & tmp_264_i)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 32> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%currWord_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %rx_exh2dropFifo_read, i128 72" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:493]   --->   Operation 30 'bitselect' 'currWord_last_V' <Predicate = (state_5_load == 2 & tmp_264_i)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln494 = br i1 %currWord_last_V, void %if.end17.i, void %if.then16.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:494]   --->   Operation 31 'br' 'br_ln494' <Predicate = (state_5_load == 2 & tmp_264_i)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.84ns)   --->   "%store_ln496 = store i2 0, i2 %state_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:496]   --->   Operation 32 'store' 'store_ln496' <Predicate = (state_5_load == 2 & tmp_264_i & currWord_last_V)> <Delay = 0.84>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln497 = br void %if.end17.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:497]   --->   Operation 33 'br' 'br_ln497' <Predicate = (state_5_load == 2 & tmp_264_i & currWord_last_V)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln498 = br void %if.end18.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:498]   --->   Operation 34 'br' 'br_ln498' <Predicate = (state_5_load == 2 & tmp_264_i)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln499 = br void %drop_ooo_ibh<64>.exit" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:499]   --->   Operation 35 'br' 'br_ln499' <Predicate = (state_5_load == 2)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i1P0A, i1 %rx_ibhDropFifo, i32 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:466]   --->   Operation 36 'nbreadreq' 'tmp_i' <Predicate = (state_5_load != 2 & state_5_load != 1)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln466 = br i1 %tmp_i, void %if.end2.i, void %if.then.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:466]   --->   Operation 37 'br' 'br_ln466' <Predicate = (state_5_load != 2 & state_5_load != 1)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (2.33ns)   --->   "%drop = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %rx_ibhDropFifo" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:468]   --->   Operation 38 'read' 'drop' <Predicate = (state_5_load != 2 & state_5_load != 1 & tmp_i)> <Delay = 2.33> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 39 [1/1] (0.49ns)   --->   "%select_ln469 = select i1 %drop, i2 2, i2 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:469]   --->   Operation 39 'select' 'select_ln469' <Predicate = (state_5_load != 2 & state_5_load != 1 & tmp_i)> <Delay = 0.49> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.84ns)   --->   "%store_ln471 = store i2 %select_ln469, i2 %state_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:471]   --->   Operation 40 'store' 'store_ln471' <Predicate = (state_5_load != 2 & state_5_load != 1 & tmp_i)> <Delay = 0.84>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln477 = br void %if.end2.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:477]   --->   Operation 41 'br' 'br_ln477' <Predicate = (state_5_load != 2 & state_5_load != 1 & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln478 = br void %drop_ooo_ibh<64>.exit" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:478]   --->   Operation 42 'br' 'br_ln478' <Predicate = (state_5_load != 2 & state_5_load != 1)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.33>
+ST_2 : Operation 43 [1/1] (2.33ns)   --->   "%write_ln483 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P0A, i128 %rx_ibhDrop2exhFifo, i128 %rx_exh2dropFifo_read_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:483]   --->   Operation 43 'write' 'write_ln483' <Predicate = (state_5_load == 1 & tmp_i_266)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 32> <FIFO>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 44 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ state_5]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
+Port [ rx_ibhDropFifo]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ rx_exh2dropFifo]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ rx_ibhDrop2exhFifo]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specinterface_ln0      (specinterface) [ 000]
+specpipeline_ln445     (specpipeline ) [ 000]
+state_5_load           (load         ) [ 011]
+switch_ln463           (switch       ) [ 000]
+tmp_i_266              (nbreadreq    ) [ 011]
+br_ln480               (br           ) [ 000]
+rx_exh2dropFifo_read_1 (read         ) [ 011]
+currWord_last_V_22     (bitselect    ) [ 010]
+br_ln484               (br           ) [ 000]
+store_ln486            (store        ) [ 000]
+br_ln487               (br           ) [ 000]
+br_ln488               (br           ) [ 000]
+br_ln489               (br           ) [ 000]
+tmp_264_i              (nbreadreq    ) [ 010]
+br_ln491               (br           ) [ 000]
+rx_exh2dropFifo_read   (read         ) [ 000]
+currWord_last_V        (bitselect    ) [ 010]
+br_ln494               (br           ) [ 000]
+store_ln496            (store        ) [ 000]
+br_ln497               (br           ) [ 000]
+br_ln498               (br           ) [ 000]
+br_ln499               (br           ) [ 000]
+tmp_i                  (nbreadreq    ) [ 010]
+br_ln466               (br           ) [ 000]
+drop                   (read         ) [ 000]
+select_ln469           (select       ) [ 000]
+store_ln471            (store        ) [ 000]
+br_ln477               (br           ) [ 000]
+br_ln478               (br           ) [ 000]
+write_ln483            (write        ) [ 000]
+ret_ln0                (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="state_5">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="state_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="rx_ibhDropFifo">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rx_ibhDropFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rx_exh2dropFifo">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rx_exh2dropFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="rx_ibhDrop2exhFifo">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rx_ibhDrop2exhFifo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i128P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i128P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitSelect.i1.i128.i128"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i1P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i128P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="grp_nbreadreq_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="1" slack="0"/>
+<pin id="44" dir="0" index="1" bw="128" slack="0"/>
+<pin id="45" dir="0" index="2" bw="1" slack="0"/>
+<pin id="46" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i_266/1 tmp_264_i/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="grp_read_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="128" slack="0"/>
+<pin id="52" dir="0" index="1" bw="128" slack="0"/>
+<pin id="53" dir="1" index="2" bw="128" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rx_exh2dropFifo_read_1/1 rx_exh2dropFifo_read/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="tmp_i_nbreadreq_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="1" slack="0"/>
+<pin id="58" dir="0" index="1" bw="1" slack="0"/>
+<pin id="59" dir="0" index="2" bw="1" slack="0"/>
+<pin id="60" dir="1" index="3" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_i/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="drop_read_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="1" slack="0"/>
+<pin id="66" dir="0" index="1" bw="1" slack="0"/>
+<pin id="67" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="drop/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="write_ln483_write_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="0" slack="0"/>
+<pin id="72" dir="0" index="1" bw="128" slack="0"/>
+<pin id="73" dir="0" index="2" bw="128" slack="1"/>
+<pin id="74" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln483/2 "/>
+</bind>
+</comp>
+
+<comp id="77" class="1004" name="grp_fu_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="1" slack="0"/>
+<pin id="79" dir="0" index="1" bw="128" slack="0"/>
+<pin id="80" dir="0" index="2" bw="8" slack="0"/>
+<pin id="81" dir="1" index="3" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="bitselect(1000) " fcode="bitselect"/>
+<opset="currWord_last_V_22/1 currWord_last_V/1 "/>
+</bind>
+</comp>
+
+<comp id="85" class="1004" name="state_5_load_load_fu_85">
+<pin_list>
+<pin id="86" dir="0" index="0" bw="2" slack="0"/>
+<pin id="87" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="state_5_load/1 "/>
+</bind>
+</comp>
+
+<comp id="89" class="1004" name="store_ln486_store_fu_89">
+<pin_list>
+<pin id="90" dir="0" index="0" bw="1" slack="0"/>
+<pin id="91" dir="0" index="1" bw="2" slack="0"/>
+<pin id="92" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln486/1 "/>
+</bind>
+</comp>
+
+<comp id="95" class="1004" name="store_ln496_store_fu_95">
+<pin_list>
+<pin id="96" dir="0" index="0" bw="1" slack="0"/>
+<pin id="97" dir="0" index="1" bw="2" slack="0"/>
+<pin id="98" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln496/1 "/>
+</bind>
+</comp>
+
+<comp id="101" class="1004" name="select_ln469_fu_101">
+<pin_list>
+<pin id="102" dir="0" index="0" bw="1" slack="0"/>
+<pin id="103" dir="0" index="1" bw="2" slack="0"/>
+<pin id="104" dir="0" index="2" bw="2" slack="0"/>
+<pin id="105" dir="1" index="3" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="select_ln469/1 "/>
+</bind>
+</comp>
+
+<comp id="109" class="1004" name="store_ln471_store_fu_109">
+<pin_list>
+<pin id="110" dir="0" index="0" bw="2" slack="0"/>
+<pin id="111" dir="0" index="1" bw="2" slack="0"/>
+<pin id="112" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln471/1 "/>
+</bind>
+</comp>
+
+<comp id="115" class="1005" name="state_5_load_reg_115">
+<pin_list>
+<pin id="116" dir="0" index="0" bw="2" slack="1"/>
+<pin id="117" dir="1" index="1" bw="2" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="state_5_load "/>
+</bind>
+</comp>
+
+<comp id="119" class="1005" name="tmp_i_266_reg_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="1" slack="1"/>
+<pin id="121" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_i_266 "/>
+</bind>
+</comp>
+
+<comp id="123" class="1005" name="rx_exh2dropFifo_read_1_reg_123">
+<pin_list>
+<pin id="124" dir="0" index="0" bw="128" slack="1"/>
+<pin id="125" dir="1" index="1" bw="128" slack="1"/>
+</pin_list>
+<bind>
+<opset="rx_exh2dropFifo_read_1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="47"><net_src comp="26" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="48"><net_src comp="4" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="49"><net_src comp="20" pin="0"/><net_sink comp="42" pin=2"/></net>
+
+<net id="54"><net_src comp="28" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="4" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="61"><net_src comp="36" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="62"><net_src comp="2" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="63"><net_src comp="20" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="68"><net_src comp="38" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="69"><net_src comp="2" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="75"><net_src comp="40" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="76"><net_src comp="6" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="82"><net_src comp="30" pin="0"/><net_sink comp="77" pin=0"/></net>
+
+<net id="83"><net_src comp="50" pin="2"/><net_sink comp="77" pin=1"/></net>
+
+<net id="84"><net_src comp="32" pin="0"/><net_sink comp="77" pin=2"/></net>
+
+<net id="88"><net_src comp="0" pin="0"/><net_sink comp="85" pin=0"/></net>
+
+<net id="93"><net_src comp="34" pin="0"/><net_sink comp="89" pin=0"/></net>
+
+<net id="94"><net_src comp="0" pin="0"/><net_sink comp="89" pin=1"/></net>
+
+<net id="99"><net_src comp="34" pin="0"/><net_sink comp="95" pin=0"/></net>
+
+<net id="100"><net_src comp="0" pin="0"/><net_sink comp="95" pin=1"/></net>
+
+<net id="106"><net_src comp="64" pin="2"/><net_sink comp="101" pin=0"/></net>
+
+<net id="107"><net_src comp="22" pin="0"/><net_sink comp="101" pin=1"/></net>
+
+<net id="108"><net_src comp="24" pin="0"/><net_sink comp="101" pin=2"/></net>
+
+<net id="113"><net_src comp="101" pin="3"/><net_sink comp="109" pin=0"/></net>
+
+<net id="114"><net_src comp="0" pin="0"/><net_sink comp="109" pin=1"/></net>
+
+<net id="118"><net_src comp="85" pin="1"/><net_sink comp="115" pin=0"/></net>
+
+<net id="122"><net_src comp="42" pin="3"/><net_sink comp="119" pin=0"/></net>
+
+<net id="126"><net_src comp="50" pin="2"/><net_sink comp="123" pin=0"/></net>
+
+<net id="127"><net_src comp="123" pin="1"/><net_sink comp="70" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: state_5 | {1 }
+	Port: rx_ibhDropFifo | {}
+	Port: rx_exh2dropFifo | {}
+	Port: rx_ibhDrop2exhFifo | {2 }
+ - Input state : 
+	Port: drop_ooo_ibh<64> : state_5 | {1 }
+	Port: drop_ooo_ibh<64> : rx_ibhDropFifo | {1 }
+	Port: drop_ooo_ibh<64> : rx_exh2dropFifo | {1 }
+	Port: drop_ooo_ibh<64> : rx_ibhDrop2exhFifo | {}
+  - Chain level:
+	State 1
+		switch_ln463 : 1
+		br_ln484 : 1
+		br_ln494 : 1
+		store_ln471 : 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|
+| Operation|     Functional Unit     |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|
+|  select  |   select_ln469_fu_101   |    0    |    2    |
+|----------|-------------------------|---------|---------|
+| nbreadreq|   grp_nbreadreq_fu_42   |    0    |    0    |
+|          |  tmp_i_nbreadreq_fu_56  |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|   read   |      grp_read_fu_50     |    0    |    0    |
+|          |     drop_read_fu_64     |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|   write  | write_ln483_write_fu_70 |    0    |    0    |
+|----------|-------------------------|---------|---------|
+| bitselect|        grp_fu_77        |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|   Total  |                         |    0    |    2    |
+|----------|-------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------------+--------+
+|                              |   FF   |
++------------------------------+--------+
+|rx_exh2dropFifo_read_1_reg_123|   128  |
+|     state_5_load_reg_115     |    2   |
+|       tmp_i_266_reg_119      |    1   |
++------------------------------+--------+
+|             Total            |   131  |
++------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |    0   |    2   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |   131  |    -   |
++-----------+--------+--------+
+|   Total   |   131  |    2   |
++-----------+--------+--------+

@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'conn_table'
+================================================================
+* Date:           Tue Aug 15 18:30:19 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  4.602 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      16|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        6|     -|       0|       0|    0|
+|Multiplexer      |        -|     -|       -|      75|    -|
+|Register         |        -|     -|       4|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        6|     0|       4|      91|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2940|  3600|  866400|  433200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------------+---------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |              Memory              |                          Module                         | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------------+---------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |conn_table_remote_ip_address_V_U  |conn_table_conn_table_remote_ip_address_V_RAM_AUTO_1R1W  |        4|  0|   0|    0|   500|  128|     1|        64000|
+    |conn_table_remote_qpn_V_U         |conn_table_conn_table_remote_qpn_V_RAM_AUTO_1R1W         |        1|  0|   0|    0|   500|   24|     1|        12000|
+    |conn_table_remote_udp_port_V_U    |conn_table_conn_table_remote_udp_port_V_RAM_AUTO_1R1W    |        1|  0|   0|    0|   500|   16|     1|         8000|
+    +----------------------------------+---------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                             |                                                         |        6|  0|   0|    0|  1500|  168|     3|        84000|
+    +----------------------------------+---------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_117                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op17_read_state1     |       and|   0|  0|   2|           1|           1|
+    |tmp_i_267_nbreadreq_fu_72_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_64_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  16|           8|           7|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                  |   9|          2|    1|          2|
+    |conn_table_remote_ip_address_V_address0  |  13|          3|    9|         27|
+    |conn_table_remote_qpn_V_address0         |  13|          3|    9|         27|
+    |conn_table_remote_udp_port_V_address0    |  13|          3|    9|         27|
+    |s_axis_qp_conn_interface_TDATA_blk_n     |   9|          2|    1|          2|
+    |tx_connTable2ibh_rsp_blk_n               |   9|          2|    1|          2|
+    |tx_ibhconnTable_req_blk_n                |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |  75|         17|   31|         89|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |tmp_i_reg_230            |  1|   0|    1|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  4|   0|    4|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+--------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++-------------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_continue                          |   in|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|                conn_table|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|                conn_table|  return value|
+|s_axis_qp_conn_interface_TVALID      |   in|    1|        axis|  s_axis_qp_conn_interface|       pointer|
+|s_axis_qp_conn_interface_TDATA       |   in|  184|        axis|  s_axis_qp_conn_interface|       pointer|
+|s_axis_qp_conn_interface_TREADY      |  out|    1|        axis|  s_axis_qp_conn_interface|       pointer|
+|tx_ibhconnTable_req_dout             |   in|   16|     ap_fifo|       tx_ibhconnTable_req|       pointer|
+|tx_ibhconnTable_req_num_data_valid   |   in|    2|     ap_fifo|       tx_ibhconnTable_req|       pointer|
+|tx_ibhconnTable_req_fifo_cap         |   in|    2|     ap_fifo|       tx_ibhconnTable_req|       pointer|
+|tx_ibhconnTable_req_empty_n          |   in|    1|     ap_fifo|       tx_ibhconnTable_req|       pointer|
+|tx_ibhconnTable_req_read             |  out|    1|     ap_fifo|       tx_ibhconnTable_req|       pointer|
+|tx_connTable2ibh_rsp_din             |  out|  384|     ap_fifo|      tx_connTable2ibh_rsp|       pointer|
+|tx_connTable2ibh_rsp_num_data_valid  |   in|    4|     ap_fifo|      tx_connTable2ibh_rsp|       pointer|
+|tx_connTable2ibh_rsp_fifo_cap        |   in|    4|     ap_fifo|      tx_connTable2ibh_rsp|       pointer|
+|tx_connTable2ibh_rsp_full_n          |   in|    1|     ap_fifo|      tx_connTable2ibh_rsp|       pointer|
+|tx_connTable2ibh_rsp_write           |  out|    1|     ap_fifo|      tx_connTable2ibh_rsp|       pointer|
++-------------------------------------+-----+-----+------------+--------------------------+--------------+
+

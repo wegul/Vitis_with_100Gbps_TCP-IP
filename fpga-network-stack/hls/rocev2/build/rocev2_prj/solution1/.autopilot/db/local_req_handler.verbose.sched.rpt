@@ -1,0 +1,225 @@
+
+
+================================================================
+== Vitis HLS Report for 'local_req_handler'
+================================================================
+* Date:           Tue Aug 15 18:30:05 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  5.631 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.63>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %tx_appMetaFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %tx_appMetaFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %tx_appMetaFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i144 %tx_localMemCmdFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i144 %tx_localMemCmdFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i144 %tx_localMemCmdFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_readReqAddr_push, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_readReqAddr_push, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_readReqAddr_push, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i144 %tx_localMemCmdFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_readReqAddr_push, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %tx_appMetaFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i184 %s_axis_tx_meta, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specpipeline_ln1618 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_6" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1618]   --->   Operation 16 'specpipeline' 'specpipeline_ln1618' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lrh_state_load = load i1 %lrh_state"   --->   Operation 17 'load' 'lrh_state_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_load = load i48 %meta_local_vaddr_V"   --->   Operation 18 'load' 'meta_local_vaddr_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%meta_remote_vaddr_V_load = load i48 %meta_remote_vaddr_V" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1742]   --->   Operation 19 'load' 'meta_remote_vaddr_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%meta_length_V_1_load = load i32 %meta_length_V_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1727]   --->   Operation 20 'load' 'meta_length_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln1645 = br i1 %lrh_state_load, void %sw.bb.i, void %sw.bb39.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1645]   --->   Operation 21 'br' 'br_ln1645' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i184P0A, i184 %s_axis_tx_meta, i32 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1666]   --->   Operation 22 'nbreadreq' 'tmp_i' <Predicate = (!lrh_state_load)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.60> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 23 [1/1] (0.85ns)   --->   "%br_ln1666 = br i1 %tmp_i, void %sw.epilog.i, void %if.then.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1666]   --->   Operation 23 'br' 'br_ln1666' <Predicate = (!lrh_state_load)> <Delay = 0.85>
+ST_1 : Operation 24 [1/1] (2.33ns)   --->   "%s_axis_tx_meta_read = read i184 @_ssdm_op_Read.ap_fifo.volatile.i184P0A, i184 %s_axis_tx_meta" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 24 'read' 's_axis_tx_meta_read' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.60> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln1669 = trunc i184 %s_axis_tx_meta_read" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 25 'trunc' 'trunc_ln1669' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln1669_4 = partselect i48 @_ssdm_op_PartSelect.i48.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 104, i32 151" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 26 'partselect' 'trunc_ln1669_4' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln1669_5 = partselect i32 @_ssdm_op_PartSelect.i32.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 152, i32 183" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 27 'partselect' 'trunc_ln1669_5' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%laddr_V = partselect i48 @_ssdm_op_PartSelect.i48.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 56, i32 103" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 28 'partselect' 'laddr_V' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_173_i = partselect i24 @_ssdm_op_PartSelect.i24.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 32, i32 55" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 29 'partselect' 'tmp_173_i' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%store_ln1669 = store i32 %trunc_ln1669, i32 %meta_op_code_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 30 'store' 'store_ln1669' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%store_ln1669 = store i24 %tmp_173_i, i24 %meta_qpn_V_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 31 'store' 'store_ln1669' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.48ns)   --->   "%switch_ln1670 = switch i32 %trunc_ln1669, void %if.else19.i, i32 0, void %if.then6.i, i32 4, void %if.then10.i, i32 3, void %if.end.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1670]   --->   Operation 32 'switch' 'switch_ln1670' <Predicate = (!lrh_state_load & tmp_i)> <Delay = 0.48>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end15.i"   --->   Operation 33 'br' 'br_ln0' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln186_i = partselect i16 @_ssdm_op_PartSelect.i16.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 32, i32 47"   --->   Operation 34 'partselect' 'trunc_ln186_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4) | (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.85ns)   --->   "%br_ln1690 = br void %sw.epilog.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1690]   --->   Operation 35 'br' 'br_ln1690' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4) | (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.85>
+ST_1 : Operation 36 [1/1] (1.26ns)   --->   "%icmp_ln1696 = icmp_eq  i32 %trunc_ln1669, i32 2" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1696]   --->   Operation 36 'icmp' 'icmp_ln1696' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 1.26> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.62ns)   --->   "%writeOpcode_2 = select i1 %icmp_ln1696, i5 24, i5 10" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1696]   --->   Operation 37 'select' 'writeOpcode_2' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (1.26ns)   --->   "%icmp_ln1035_2 = icmp_ugt  i32 %trunc_ln1669_5, i32 1408"   --->   Operation 38 'icmp' 'icmp_ln1035_2' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 1.26> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.84ns)   --->   "%br_ln1698 = br i1 %icmp_ln1035_2, void %if.end28.i, void %if.then22.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1698]   --->   Operation 39 'br' 'br_ln1698' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.84>
+ST_1 : Operation 40 [1/1] (1.59ns)   --->   "%add_ln840_8 = add i48 %laddr_V, i48 1408"   --->   Operation 40 'add' 'add_ln840_8' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 1.59> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (1.59ns)   --->   "%add_ln840_9 = add i48 %trunc_ln1669_4, i48 1408"   --->   Operation 41 'add' 'add_ln840_9' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 1.59> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (1.51ns)   --->   "%add_ln841_5 = add i32 %trunc_ln1669_5, i32 4294965888"   --->   Operation 42 'add' 'add_ln841_5' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 1.51> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.58ns)   --->   "%select_ln1639_1_cast_cast = select i1 %icmp_ln1696, i5 25, i5 6" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1696]   --->   Operation 43 'select' 'select_ln1639_1_cast_cast' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 0.58> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.84ns)   --->   "%store_ln0 = store i1 1, i1 %lrh_state"   --->   Operation 44 'store' 'store_ln0' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 0.84>
+ST_1 : Operation 45 [1/1] (0.84ns)   --->   "%br_ln1705 = br void %if.end28.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1705]   --->   Operation 45 'br' 'br_ln1705' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3 & icmp_ln1035_2)> <Delay = 0.84>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_new_0_i = phi i48 %add_ln840_8, void %if.then22.i, i48 %laddr_V, void %if.else19.i"   --->   Operation 46 'phi' 'meta_local_vaddr_V_new_0_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%meta_remote_vaddr_V_new_0_i = phi i48 %add_ln840_9, void %if.then22.i, i48 %trunc_ln1669_4, void %if.else19.i"   --->   Operation 47 'phi' 'meta_remote_vaddr_V_new_0_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%meta_length_V_1_new_0_i = phi i32 %add_ln841_5, void %if.then22.i, i32 %trunc_ln1669_5, void %if.else19.i"   --->   Operation 48 'phi' 'meta_length_V_1_new_0_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln_i = partselect i16 @_ssdm_op_PartSelect.i16.i184.i32.i32, i184 %s_axis_tx_meta_read, i32 32, i32 47"   --->   Operation 49 'partselect' 'trunc_ln_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.85ns)   --->   "%br_ln0 = br void %sw.epilog.i"   --->   Operation 50 'br' 'br_ln0' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.85>
+ST_1 : Operation 51 [1/1] (1.26ns)   --->   "%icmp_ln1035 = icmp_ugt  i32 %meta_length_V_1_load, i32 1408"   --->   Operation 51 'icmp' 'icmp_ln1035' <Predicate = (lrh_state_load)> <Delay = 1.26> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%meta_op_code_5_load = load i32 %meta_op_code_5" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1734]   --->   Operation 52 'load' 'meta_op_code_5_load' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (1.26ns)   --->   "%icmp_ln1734 = icmp_eq  i32 %meta_op_code_5_load, i32 2" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1734]   --->   Operation 53 'icmp' 'icmp_ln1734' <Predicate = (lrh_state_load)> <Delay = 1.26> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.26> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln1728 = br i1 %icmp_ln1035, void %if.else48.i, void %if.then41.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1728]   --->   Operation 54 'br' 'br_ln1728' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.62ns)   --->   "%writeOpcode = select i1 %icmp_ln1734, i5 27, i5 8" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1738]   --->   Operation 55 'select' 'writeOpcode' <Predicate = (lrh_state_load & !icmp_ln1035)> <Delay = 0.62> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.84ns)   --->   "%store_ln0 = store i1 0, i1 %lrh_state"   --->   Operation 56 'store' 'store_ln0' <Predicate = (lrh_state_load & !icmp_ln1035)> <Delay = 0.84>
+ST_1 : Operation 57 [1/1] (0.84ns)   --->   "%br_ln0 = br void %if.end51.i"   --->   Operation 57 'br' 'br_ln0' <Predicate = (lrh_state_load & !icmp_ln1035)> <Delay = 0.84>
+ST_1 : Operation 58 [1/1] (1.59ns)   --->   "%add_ln840 = add i48 %meta_local_vaddr_V_load, i48 1408"   --->   Operation 58 'add' 'add_ln840' <Predicate = (lrh_state_load & icmp_ln1035)> <Delay = 1.59> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (1.59ns)   --->   "%add_ln840_7 = add i48 %meta_remote_vaddr_V_load, i48 1408"   --->   Operation 59 'add' 'add_ln840_7' <Predicate = (lrh_state_load & icmp_ln1035)> <Delay = 1.59> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (1.51ns)   --->   "%add_ln841 = add i32 %meta_length_V_1_load, i32 4294965888"   --->   Operation 60 'add' 'add_ln841' <Predicate = (lrh_state_load & icmp_ln1035)> <Delay = 1.51> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.58ns)   --->   "%select_ln1735 = select i1 %icmp_ln1734, i5 26, i5 7" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1735]   --->   Operation 61 'select' 'select_ln1735' <Predicate = (lrh_state_load & icmp_ln1035)> <Delay = 0.58> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (0.84ns)   --->   "%br_ln1735 = br void %if.end51.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1735]   --->   Operation 62 'br' 'br_ln1735' <Predicate = (lrh_state_load & icmp_ln1035)> <Delay = 0.84>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_flag_3_i = phi i1 1, void %if.then41.i, i1 0, void %if.else48.i"   --->   Operation 63 'phi' 'meta_local_vaddr_V_flag_3_i' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_new_3_i = phi i48 %add_ln840, void %if.then41.i, i48 0, void %if.else48.i"   --->   Operation 64 'phi' 'meta_local_vaddr_V_new_3_i' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%meta_remote_vaddr_V_new_3_i = phi i48 %add_ln840_7, void %if.then41.i, i48 0, void %if.else48.i"   --->   Operation 65 'phi' 'meta_remote_vaddr_V_new_3_i' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%meta_length_V_1_new_3_i = phi i32 %add_ln841, void %if.then41.i, i32 0, void %if.else48.i"   --->   Operation 66 'phi' 'meta_length_V_1_new_3_i' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.85ns)   --->   "%br_ln1746 = br void %sw.epilog.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1746]   --->   Operation 67 'br' 'br_ln1746' <Predicate = (lrh_state_load)> <Delay = 0.85>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_flag_4_i = phi i1 %meta_local_vaddr_V_flag_3_i, void %if.end51.i, i1 0, void %sw.bb.i, i1 1, void %if.end28.i, i1 1, void %if.end15.i"   --->   Operation 68 'phi' 'meta_local_vaddr_V_flag_4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%meta_local_vaddr_V_new_4_i = phi i48 %meta_local_vaddr_V_new_3_i, void %if.end51.i, i48 0, void %sw.bb.i, i48 %meta_local_vaddr_V_new_0_i, void %if.end28.i, i48 %laddr_V, void %if.end15.i"   --->   Operation 69 'phi' 'meta_local_vaddr_V_new_4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%meta_remote_vaddr_V_new_4_i = phi i48 %meta_remote_vaddr_V_new_3_i, void %if.end51.i, i48 0, void %sw.bb.i, i48 %meta_remote_vaddr_V_new_0_i, void %if.end28.i, i48 %trunc_ln1669_4, void %if.end15.i"   --->   Operation 70 'phi' 'meta_remote_vaddr_V_new_4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%meta_length_V_1_new_4_i = phi i32 %meta_length_V_1_new_3_i, void %if.end51.i, i32 0, void %sw.bb.i, i32 %meta_length_V_1_new_0_i, void %if.end28.i, i32 %trunc_ln1669_5, void %if.end15.i"   --->   Operation 71 'phi' 'meta_length_V_1_new_4_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %meta_local_vaddr_V_flag_4_i, void %local_req_handler.exit, void %mergeST3.i"   --->   Operation 72 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%store_ln1669 = store i32 %meta_length_V_1_new_4_i, i32 %meta_length_V_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 73 'store' 'store_ln1669' <Predicate = (meta_local_vaddr_V_flag_4_i)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%store_ln1669 = store i48 %meta_remote_vaddr_V_new_4_i, i48 %meta_remote_vaddr_V" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 74 'store' 'store_ln1669' <Predicate = (meta_local_vaddr_V_flag_4_i)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln1669 = store i48 %meta_local_vaddr_V_new_4_i, i48 %meta_local_vaddr_V" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669]   --->   Operation 75 'store' 'store_ln1669' <Predicate = (meta_local_vaddr_V_flag_4_i)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln0 = br void %local_req_handler.exit"   --->   Operation 76 'br' 'br_ln0' <Predicate = (meta_local_vaddr_V_flag_4_i)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.33>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%or_ln1678_1 = bitconcatenate i160 @_ssdm_op_BitConcatenate.i160.i32.i16.i48.i8.i24.i32, i32 %trunc_ln1669_5, i16 0, i48 %trunc_ln1669_4, i8 0, i24 %tmp_173_i, i32 0" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1678]   --->   Operation 77 'bitconcatenate' 'or_ln1678_1' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%or_ln1678 = or i160 %or_ln1678_1, i160 29" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1678]   --->   Operation 78 'or' 'or_ln1678' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln1678 = zext i160 %or_ln1678" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1678]   --->   Operation 79 'zext' 'zext_ln1678' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (2.33ns)   --->   "%write_ln1678 = write void @_ssdm_op_Write.ap_fifo.volatile.i256P0A, i256 %tx_appMetaFifo, i256 %zext_ln1678" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1678]   --->   Operation 80 'write' 'write_ln1678' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 32> <FIFO>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln1679 = br void %if.end.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1679]   --->   Operation 81 'br' 'br_ln1679' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 4)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%or_ln1674_1 = bitconcatenate i160 @_ssdm_op_BitConcatenate.i160.i32.i16.i48.i8.i24.i32, i32 %trunc_ln1669_5, i16 0, i48 %trunc_ln1669_4, i8 0, i24 %tmp_173_i, i32 0" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674]   --->   Operation 82 'bitconcatenate' 'or_ln1674_1' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%or_ln1674 = or i160 %or_ln1674_1, i160 12" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674]   --->   Operation 83 'or' 'or_ln1674' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln1674 = zext i160 %or_ln1674" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674]   --->   Operation 84 'zext' 'zext_ln1674' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (2.33ns)   --->   "%write_ln1674 = write void @_ssdm_op_Write.ap_fifo.volatile.i256P0A, i256 %tx_appMetaFifo, i256 %zext_ln1674" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674]   --->   Operation 85 'write' 'write_ln1674' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 32> <FIFO>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln1675 = br void %if.end15.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1675]   --->   Operation 86 'br' 'br_ln1675' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_179_i = bitconcatenate i112 @_ssdm_op_BitConcatenate.i112.i48.i48.i16, i48 %laddr_V, i48 0, i16 %trunc_ln186_i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1686]   --->   Operation 87 'bitconcatenate' 'tmp_179_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4) | (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln1686 = zext i112 %tmp_179_i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1686]   --->   Operation 88 'zext' 'zext_ln1686' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4) | (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (2.33ns)   --->   "%write_ln1686 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P0A, i128 %tx_readReqAddr_push, i128 %zext_ln1686" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1686]   --->   Operation 89 'write' 'write_ln1686' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 == 3) | (!lrh_state_load & tmp_i & trunc_ln1669 == 4) | (!lrh_state_load & tmp_i & trunc_ln1669 == 0)> <Delay = 2.33> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%writeOpcode_3 = phi i5 %select_ln1639_1_cast_cast, void %if.then22.i, i5 %writeOpcode_2, void %if.else19.i"   --->   Operation 90 'phi' 'writeOpcode_3' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%zext_ln1639 = zext i5 %writeOpcode_3" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1639]   --->   Operation 91 'zext' 'zext_ln1639' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_177_i = bitconcatenate i112 @_ssdm_op_BitConcatenate.i112.i32.i16.i48.i16, i32 %trunc_ln1669_5, i16 0, i48 %laddr_V, i16 %trunc_ln_i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1714]   --->   Operation 92 'bitconcatenate' 'tmp_177_i' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%zext_ln1714 = zext i112 %tmp_177_i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1714]   --->   Operation 93 'zext' 'zext_ln1714' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (2.33ns)   --->   "%write_ln1714 = write void @_ssdm_op_Write.ap_fifo.volatile.i144P0A, i144 %tx_localMemCmdFifo, i144 %zext_ln1714" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1714]   --->   Operation 94 'write' 'write_ln1714' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 2.33> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 144> <Depth = 2> <FIFO>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i160 @_ssdm_op_BitConcatenate.i160.i32.i16.i48.i8.i24.i32, i32 %trunc_ln1669_5, i16 0, i48 %trunc_ln1669_4, i8 0, i24 %tmp_173_i, i32 %zext_ln1639" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1717]   --->   Operation 95 'bitconcatenate' 'tmp_s' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln1717 = zext i160 %tmp_s" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1717]   --->   Operation 96 'zext' 'zext_ln1717' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (2.33ns)   --->   "%write_ln1717 = write void @_ssdm_op_Write.ap_fifo.volatile.i256P0A, i256 %tx_appMetaFifo, i256 %zext_ln1717" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1717]   --->   Operation 97 'write' 'write_ln1717' <Predicate = (!lrh_state_load & tmp_i & trunc_ln1669 != 0 & trunc_ln1669 != 4 & trunc_ln1669 != 3)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 32> <FIFO>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%length = phi i32 1408, void %if.then41.i, i32 %meta_length_V_1_load, void %if.else48.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1727]   --->   Operation 98 'phi' 'length' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%writeOpcode_1 = phi i5 %select_ln1735, void %if.then41.i, i5 %writeOpcode, void %if.else48.i"   --->   Operation 99 'phi' 'writeOpcode_1' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln1642 = zext i5 %writeOpcode_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1642]   --->   Operation 100 'zext' 'zext_ln1642' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%meta_qpn_V_1_load = load i24 %meta_qpn_V_1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1742]   --->   Operation 101 'load' 'meta_qpn_V_1_load' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%or_ln1742_2_i = bitconcatenate i161 @_ssdm_op_BitConcatenate.i161.i1.i32.i16.i48.i8.i24.i32, i1 0, i32 %length, i16 0, i48 %meta_remote_vaddr_V_load, i8 0, i24 %meta_qpn_V_1_load, i32 %zext_ln1642" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1742]   --->   Operation 102 'bitconcatenate' 'or_ln1742_2_i' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln1742 = zext i161 %or_ln1742_2_i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1742]   --->   Operation 103 'zext' 'zext_ln1742' <Predicate = (lrh_state_load)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (2.33ns)   --->   "%write_ln1742 = write void @_ssdm_op_Write.ap_fifo.volatile.i256P0A, i256 %tx_appMetaFifo, i256 %zext_ln1742" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1742]   --->   Operation 104 'write' 'write_ln1742' <Predicate = (lrh_state_load)> <Delay = 2.33> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 2.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 32> <FIFO>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 105 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.4ns, clock uncertainty: 1.73ns.
+
+ <State 1>: 5.63ns
+The critical path consists of the following:
+	fifo read operation ('s_axis_tx_meta_read', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) on port 's_axis_tx_meta' (/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) [34]  (2.34 ns)
+	'add' operation ('add_ln840_8') [69]  (1.59 ns)
+	multiplexor before 'phi' operation ('laddr.V') with incoming values : ('laddr.V', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) ('add_ln840_8') [76]  (0.844 ns)
+	'phi' operation ('laddr.V') with incoming values : ('laddr.V', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) ('add_ln840_8') [76]  (0 ns)
+	multiplexor before 'phi' operation ('laddr.V') with incoming values : ('laddr.V', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) ('add_ln840_8') ('add_ln840') [119]  (0.858 ns)
+	'phi' operation ('laddr.V') with incoming values : ('laddr.V', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1669) ('add_ln840_8') ('add_ln840') [119]  (0 ns)
+
+ <State 2>: 2.34ns
+The critical path consists of the following:
+	'or' operation ('or_ln1674', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674) [53]  (0 ns)
+	fifo write operation ('write_ln1674', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674) on port 'tx_appMetaFifo' (/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp:1674) [55]  (2.34 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

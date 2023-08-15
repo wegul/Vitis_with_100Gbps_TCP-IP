@@ -1,0 +1,123 @@
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:29625:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:29625:7: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30599:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30599:5: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30613:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30613:5: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30627:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:30627:5: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:32238:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:32238:7: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44620:2: warning: Added loop label VITIS_LOOP_135_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < D/8; i++)
+ ^~~
+ VITIS_LOOP_135_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44620:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44632:2: warning: Added loop label VITIS_LOOP_147_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < D; i++)
+ ^~~
+ VITIS_LOOP_147_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44632:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44644:2: warning: Added loop label VITIS_LOOP_159_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < D/8; i++)
+ ^~~
+ VITIS_LOOP_159_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44644:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44665:2: warning: Added loop label VITIS_LOOP_180_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < D/8; i++)
+ ^~~
+ VITIS_LOOP_180_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44665:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44690:2: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+ for (int i = (D/8)-1; i >= 0; i--)
+ ^~~
+ VITIS_LOOP_205_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44690:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44711:2: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+ for (int i = (D/8)-1; i >= 0; i--)
+ ^~~
+ VITIS_LOOP_226_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44711:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44735:2: warning: Added loop label VITIS_LOOP_250_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < D/8; i++)
+ ^~~
+ VITIS_LOOP_250_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:44735:2: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46483:4: warning: Added loop label VITIS_LOOP_381_1:   [xilinx-label-all-loops]
+   for (int i = 0; i < 16; i++)
+   ^~~
+   VITIS_LOOP_381_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46483:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46493:4: warning: Added loop label VITIS_LOOP_391_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 8; i++)
+   ^~~
+   VITIS_LOOP_391_2: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46493:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46503:4: warning: Added loop label VITIS_LOOP_401_3:   [xilinx-label-all-loops]
+   for (int i = 0; i < 4; i++)
+   ^~~
+   VITIS_LOOP_401_3: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46503:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46540:4: warning: Added loop label VITIS_LOOP_438_1:   [xilinx-label-all-loops]
+   for (int i = 0; i < 16; i++)
+   ^~~
+   VITIS_LOOP_438_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46540:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46550:4: warning: Added loop label VITIS_LOOP_448_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 8; i++)
+   ^~~
+   VITIS_LOOP_448_2: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46550:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46560:4: warning: Added loop label VITIS_LOOP_458_3:   [xilinx-label-all-loops]
+   for (int i = 0; i < 4; i++)
+   ^~~
+   VITIS_LOOP_458_3: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46560:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46595:4: warning: Added loop label VITIS_LOOP_493_1:   [xilinx-label-all-loops]
+   for (int i = 0; i < 16; i++)
+   ^~~
+   VITIS_LOOP_493_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46595:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46605:4: warning: Added loop label VITIS_LOOP_503_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 8; i++)
+   ^~~
+   VITIS_LOOP_503_2: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46605:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46615:4: warning: Added loop label VITIS_LOOP_513_3:   [xilinx-label-all-loops]
+   for (int i = 0; i < 4; i++)
+   ^~~
+   VITIS_LOOP_513_3: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46615:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46651:4: warning: Added loop label VITIS_LOOP_549_1:   [xilinx-label-all-loops]
+   for (int i = 0; i < 16; i++)
+   ^~~
+   VITIS_LOOP_549_1: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46651:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46661:4: warning: Added loop label VITIS_LOOP_559_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 8; i++)
+   ^~~
+   VITIS_LOOP_559_2: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46661:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46671:4: warning: Added loop label VITIS_LOOP_569_3:   [xilinx-label-all-loops]
+   for (int i = 0; i < 4; i++)
+   ^~~
+   VITIS_LOOP_569_3: 
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:46671:4: note: FIX-IT applied suggested code changes
+/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/transport_timer.pp.0.cpp:47511:60: error: Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=transportTimerTable type=RAM_T2P impl=BRAM
+                                                           ^

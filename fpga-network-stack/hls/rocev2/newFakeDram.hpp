@@ -29,14 +29,16 @@
 #include "../mem_utils.hpp"
 
 template <int WIDTH>
-class newFakeDRAM {
-	struct MemChunk {
+class newFakeDRAM
+{
+	struct MemChunk
+	{
 		uint64_t size;
-		unsigned char* data;
+		unsigned char *data;
 	};
 
 public:
-	newFakeDRAM() {}//:numChunks(0) {}
+	newFakeDRAM() {} //: numChunks(0) {}
 	~newFakeDRAM()
 	{
 		/*for (int i = 0; i < numChunks; ++i)
@@ -44,10 +46,9 @@ public:
 			delete chunks[i]->data;
 			delete chunks[i];
 		}*/
-		return 0;
 	}
 
-	unsigned char* createChunk(uint64_t size)
+	unsigned char *createChunk(uint64_t size)
 	{
 		/*MemChunk* chunk = new MemChunk();
 		chunk->size = size;
@@ -55,9 +56,10 @@ public:
 		chunks.push_back(chunk);
 		numChunks++;
 		return chunk->data;*/
+		return 0;
 	}
 
-	void processWrite(memCmd cmd, hls::stream<routed_net_axis<WIDTH> >& dataIn)
+	void processWrite(memCmd cmd, hls::stream<routed_net_axis<WIDTH>> &dataIn)
 	{
 		std::cout << "Write command, address: " << cmd.addr << ", length: " << cmd.len << std::endl;
 
@@ -65,9 +67,9 @@ public:
 		do
 		{
 			dataIn.read(currWord);
-		} while(!currWord.last);
+		} while (!currWord.last);
 	}
-	void processWrite(routedMemCmd cmd, hls::stream<routed_net_axis<WIDTH> >& dataIn)
+	void processWrite(routedMemCmd cmd, hls::stream<routed_net_axis<WIDTH>> &dataIn)
 	{
 		std::cout << "Write command, address: " << cmd.data.addr << ", length: " << cmd.data.len << std::endl;
 
@@ -75,14 +77,14 @@ public:
 		do
 		{
 			dataIn.read(currWord);
-		} while(!currWord.last);
+		} while (!currWord.last);
 	}
 
-	void processRead(memCmd cmd, hls::stream<net_axis<WIDTH> >& dataOut)
+	void processRead(memCmd cmd, hls::stream<net_axis<WIDTH>> &dataOut)
 	{
-		
-		//uint64_t offset = cmd.addr - chunk->baseAddr;
-		uint64_t* memPtr = (uint64_t*)(uint64_t) cmd.addr; //(uint64_t*) (chunk->data + offset);
+
+		// uint64_t offset = cmd.addr - chunk->baseAddr;
+		uint64_t *memPtr = (uint64_t *)(uint64_t)cmd.addr; //(uint64_t*) (chunk->data + offset);
 		uint32_t lengthCount = 0;
 		net_axis<WIDTH> currWord;
 		currWord.keep = 0;
@@ -91,10 +93,10 @@ public:
 		do
 		{
 			lengthCount += 8;
-			currWord.data(idx*64+63, idx*64) = *memPtr;
-			currWord.keep(idx*8+7, idx*8) = 0xFF;
+			currWord.data(idx * 64 + 63, idx * 64) = *memPtr;
+			currWord.keep(idx * 8 + 7, idx * 8) = 0xFF;
 			idx++;
-			if (lengthCount == cmd.len || idx == (WIDTH/64))
+			if (lengthCount == cmd.len || idx == (WIDTH / 64))
 			{
 				currWord.last = (lengthCount == cmd.len);
 				dataOut.write(currWord);
@@ -103,14 +105,14 @@ public:
 			}
 			memPtr++;
 
-		} while(lengthCount != cmd.len);
+		} while (lengthCount != cmd.len);
 		std::cout << "total data read: " << std::dec << lengthCount << std::endl;
 	}
-   void processRead(routedMemCmd cmd, hls::stream<net_axis<WIDTH> >& dataOut)
+	void processRead(routedMemCmd cmd, hls::stream<net_axis<WIDTH>> &dataOut)
 	{
-		
-		//uint64_t offset = cmd.addr - chunk->baseAddr;
-		uint64_t* memPtr = (uint64_t*)(uint64_t) cmd.data.addr; //(uint64_t*) (chunk->data + offset);
+
+		// uint64_t offset = cmd.addr - chunk->baseAddr;
+		uint64_t *memPtr = (uint64_t *)(uint64_t)cmd.data.addr; //(uint64_t*) (chunk->data + offset);
 		uint32_t lengthCount = 0;
 		net_axis<WIDTH> currWord;
 		currWord.keep = 0;
@@ -119,10 +121,10 @@ public:
 		do
 		{
 			lengthCount += 8;
-			currWord.data(idx*64+63, idx*64) = *memPtr;
-			currWord.keep(idx*8+7, idx*8) = 0xFF;
+			currWord.data(idx * 64 + 63, idx * 64) = *memPtr;
+			currWord.keep(idx * 8 + 7, idx * 8) = 0xFF;
 			idx++;
-			if (lengthCount == cmd.data.len || idx == (WIDTH/64))
+			if (lengthCount == cmd.data.len || idx == (WIDTH / 64))
 			{
 				currWord.last = (lengthCount == cmd.data.len);
 				dataOut.write(currWord);
@@ -131,11 +133,11 @@ public:
 			}
 			memPtr++;
 
-		} while(lengthCount != cmd.data.len);
+		} while (lengthCount != cmd.data.len);
 		std::cout << "total data read: " << std::dec << lengthCount << std::endl;
 	}
 
 private:
-	//int numChunks;
-	//std::vector<MemChunk*>	chunks;
+	// int numChunks;
+	// std::vector<MemChunk*>	chunks;
 };

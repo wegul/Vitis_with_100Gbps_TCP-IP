@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vitis HLS Report for 'generate_udp_64_s'
+================================================================
+* Date:           Tue Aug 15 18:30:12 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  7.621 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  7.621 ns|  7.621 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     237|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     100|    -|
+|Register         |        -|     -|     354|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     354|     337|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2940|  3600|  866400|  433200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln76_3_fu_216_p2              |         +|   0|  0|  30|          23|           7|
+    |add_ln76_fu_282_p2                |         +|   0|  0|  30|          23|           7|
+    |grp_fu_181_p2                     |         +|   0|  0|  23|          16|           1|
+    |sub_ln80_5_fu_336_p2              |         -|   0|  0|  18|           1|          11|
+    |sub_ln80_6_fu_352_p2              |         -|   0|  0|  15|           1|           8|
+    |sub_ln80_fu_318_p2                |         -|   0|  0|  30|           7|          23|
+    |ap_condition_150                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_193                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_221                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op100_write_state2   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op107_write_state2   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op22_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op70_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op79_read_state1     |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_122_p3           |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_136_p3         |       and|   0|  0|   2|           1|           0|
+    |grp_fu_176_p2                     |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln76_3_fu_222_p2             |      icmp|   0|  0|  15|          23|           7|
+    |icmp_ln76_fu_288_p2               |      icmp|   0|  0|  15|          23|           7|
+    |icmp_ln80_fu_386_p2               |      icmp|   0|  0|   9|           5|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_condition_189                  |        or|   0|  0|   2|           1|           1|
+    |select_ln132_cast_i_fu_256_p3     |    select|   0|  0|   2|           1|           2|
+    |select_ln80_fu_378_p3             |    select|   0|  0|   5|           1|           5|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    |xor_ln132_fu_250_p2               |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 237|         156|          96|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                          |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter1_currWord_data_V_18_reg_157  |  13|          3|   64|        192|
+    |header_idx_3                                     |  17|          4|   16|         64|
+    |state_4                                          |  17|          4|    2|          8|
+    |tx_shift2udpFifo_blk_n                           |   9|          2|    1|          2|
+    |tx_udp2ipFifo_blk_n                              |   9|          2|    1|          2|
+    |tx_udp2ipFifo_din                                |  17|          4|  128|        512|
+    |tx_udpMetaFifo_blk_n                             |   9|          2|    1|          2|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            | 100|         23|  214|        784|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+-----+----+-----+-----------+
+    |                       Name                      |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                        |    1|   0|    1|          0|
+    |ap_done_reg                                      |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                          |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_currWord_data_V_18_reg_157  |   64|   0|   64|          0|
+    |currWord_data_V_reg_568                          |   64|   0|   64|          0|
+    |header_header_V_3                                |   64|   0|   64|          0|
+    |header_idx_3                                     |   16|   0|   16|          0|
+    |state_4                                          |    2|   0|    2|          0|
+    |state_4_load_reg_564                             |    2|   0|    2|          0|
+    |tmp_194_i_reg_604                                |    1|   0|    1|          0|
+    |tmp_i_262_reg_575                                |    1|   0|    1|          0|
+    |tmp_reg_590                                      |    9|   0|    9|          0|
+    |tx_shift2udpFifo_read_reg_608                    |  128|   0|  128|          0|
+    +-------------------------------------------------+-----+----+-----+-----------+
+    |Total                                            |  354|   0|  354|          0|
+    +-------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_continue                      |   in|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  generate_udp<64>|  return value|
+|tx_shift2udpFifo_dout            |   in|  128|     ap_fifo|  tx_shift2udpFifo|       pointer|
+|tx_shift2udpFifo_num_data_valid  |   in|    2|     ap_fifo|  tx_shift2udpFifo|       pointer|
+|tx_shift2udpFifo_fifo_cap        |   in|    2|     ap_fifo|  tx_shift2udpFifo|       pointer|
+|tx_shift2udpFifo_empty_n         |   in|    1|     ap_fifo|  tx_shift2udpFifo|       pointer|
+|tx_shift2udpFifo_read            |  out|    1|     ap_fifo|  tx_shift2udpFifo|       pointer|
+|tx_udpMetaFifo_dout              |   in|   64|     ap_fifo|    tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_num_data_valid    |   in|    2|     ap_fifo|    tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_fifo_cap          |   in|    2|     ap_fifo|    tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_empty_n           |   in|    1|     ap_fifo|    tx_udpMetaFifo|       pointer|
+|tx_udpMetaFifo_read              |  out|    1|     ap_fifo|    tx_udpMetaFifo|       pointer|
+|tx_udp2ipFifo_din                |  out|  128|     ap_fifo|     tx_udp2ipFifo|       pointer|
+|tx_udp2ipFifo_num_data_valid     |   in|    2|     ap_fifo|     tx_udp2ipFifo|       pointer|
+|tx_udp2ipFifo_fifo_cap           |   in|    2|     ap_fifo|     tx_udp2ipFifo|       pointer|
+|tx_udp2ipFifo_full_n             |   in|    1|     ap_fifo|     tx_udp2ipFifo|       pointer|
+|tx_udp2ipFifo_write              |  out|    1|     ap_fifo|     tx_udp2ipFifo|       pointer|
++---------------------------------+-----+-----+------------+------------------+--------------+
+

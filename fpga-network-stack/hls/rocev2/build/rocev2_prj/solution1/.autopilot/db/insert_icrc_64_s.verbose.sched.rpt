@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'insert_icrc_64_s'
+================================================================
+* Date:           Tue Aug 15 18:30:09 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  4.041 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  12.800 ns|  12.800 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.04>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_ip2crcFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_ip2crcFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_ip2crcFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %tx_ip2crcFifo, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %m_axis_tx_data, void @empty_7, i32 1, i32 1, void @empty_1, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln381 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_6" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:381]   --->   Operation 9 'specpipeline' 'specpipeline_ln381' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ii_state_load = load i1 %ii_state" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:399]   --->   Operation 10 'load' 'ii_state_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln399 = br i1 %ii_state_load, void %sw.bb.i, void %sw.bb115.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:399]   --->   Operation 11 'br' 'br_ln399' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i128P0A, i128 %tx_ip2crcFifo, i32 1" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:412]   --->   Operation 12 'nbreadreq' 'tmp_i' <Predicate = (!ii_state_load)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln412 = br i1 %tmp_i, void %if.end114.i, void %if.then.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:412]   --->   Operation 13 'br' 'br_ln412' <Predicate = (!ii_state_load)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.33ns)   --->   "%tx_ip2crcFifo_read = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %tx_ip2crcFifo" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414]   --->   Operation 14 'read' 'tx_ip2crcFifo_read' <Predicate = (!ii_state_load & tmp_i)> <Delay = 2.33> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%currWord_data_V_16 = trunc i128 %tx_ip2crcFifo_read" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414]   --->   Operation 15 'trunc' 'currWord_data_V_16' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%currWord_keep_V_2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %tx_ip2crcFifo_read, i32 64, i32 71" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414]   --->   Operation 16 'partselect' 'currWord_keep_V_2' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%currWord_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %tx_ip2crcFifo_read, i128 72" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414]   --->   Operation 17 'bitselect' 'currWord_last_V' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.84ns)   --->   "%br_ln415 = br i1 %currWord_last_V, void %if.end113.i, void %if.then2.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:415]   --->   Operation 18 'br' 'br_ln415' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.84>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i32, i128 %tx_ip2crcFifo_read, i32 71"   --->   Operation 19 'bitselect' 'p_Result_s' <Predicate = (!ii_state_load & tmp_i & currWord_last_V)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln418 = br i1 %p_Result_s, void %if.else.i, void %if.then4.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:418]   --->   Operation 20 'br' 'br_ln418' <Predicate = (!ii_state_load & tmp_i & currWord_last_V)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.86ns)   --->   "%icmp_ln429 = icmp_eq  i8 %currWord_keep_V_2, i8 15" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:429]   --->   Operation 21 'icmp' 'icmp_ln429' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & !p_Result_s)> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.84ns)   --->   "%br_ln429 = br i1 %icmp_ln429, void %if.end113.i, void %sw.bb10.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:429]   --->   Operation 22 'br' 'br_ln429' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & !p_Result_s)> <Delay = 0.84>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_Result_32 = partset i64 @_ssdm_op_PartSet.i64.i64.i32.i32.i32, i64 %currWord_data_V_16, i32 3735928559, i32 32, i32 63"   --->   Operation 23 'partset' 'p_Result_32' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & !p_Result_s & icmp_ln429)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.84ns)   --->   "%br_ln434 = br void %if.end113.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:434]   --->   Operation 24 'br' 'br_ln434' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & !p_Result_s & icmp_ln429)> <Delay = 0.84>
+ST_1 : Operation 25 [1/1] (0.84ns)   --->   "%store_ln421 = store i1 1, i1 %ii_state" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:421]   --->   Operation 25 'store' 'store_ln421' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & p_Result_s)> <Delay = 0.84>
+ST_1 : Operation 26 [1/1] (0.84ns)   --->   "%br_ln422 = br void %if.end113.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:422]   --->   Operation 26 'br' 'br_ln422' <Predicate = (!ii_state_load & tmp_i & currWord_last_V & p_Result_s)> <Delay = 0.84>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln499 = br void %insert_icrc<64>.exit" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:499]   --->   Operation 27 'br' 'br_ln499' <Predicate = (!ii_state_load)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.84ns)   --->   "%store_ln510 = store i1 0, i1 %ii_state" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:510]   --->   Operation 28 'store' 'store_ln510' <Predicate = (ii_state_load)> <Delay = 0.84>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%currWord_last_V_19 = phi i1 0, void %if.then4.i, i1 1, void %sw.bb10.i, i1 0, void %if.then.i, i1 1, void %if.else.i"   --->   Operation 29 'phi' 'currWord_last_V_19' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%currWord_keep_V = phi i8 %currWord_keep_V_2, void %if.then4.i, i8 255, void %sw.bb10.i, i8 %currWord_keep_V_2, void %if.then.i, i8 %currWord_keep_V_2, void %if.else.i"   --->   Operation 30 'phi' 'currWord_keep_V' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%currWord_data_V_15 = phi i64 %currWord_data_V_16, void %if.then4.i, i64 %p_Result_32, void %sw.bb10.i, i64 %currWord_data_V_16, void %if.then.i, i64 %currWord_data_V_16, void %if.else.i"   --->   Operation 31 'phi' 'currWord_data_V_15' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i73 @_ssdm_op_BitConcatenate.i73.i1.i8.i64, i1 %currWord_last_V_19, i8 %currWord_keep_V, i64 %currWord_data_V_15" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:497]   --->   Operation 32 'bitconcatenate' 'tmp' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln497 = zext i73 %tmp" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:497]   --->   Operation 33 'zext' 'zext_ln497' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (0.00ns)   --->   "%write_ln497 = write void @_ssdm_op_Write.axis.volatile.i128P128A, i128 %m_axis_tx_data, i128 %zext_ln497" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:497]   --->   Operation 34 'write' 'write_ln497' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 35 [2/2] (0.00ns)   --->   "%write_ln506 = write void @_ssdm_op_Write.axis.volatile.i128P128A, i128 %m_axis_tx_data, i128 4999067643979024416495" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:506]   --->   Operation 35 'write' 'write_ln506' <Predicate = (ii_state_load)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 36 [1/2] (0.00ns)   --->   "%write_ln497 = write void @_ssdm_op_Write.axis.volatile.i128P128A, i128 %m_axis_tx_data, i128 %zext_ln497" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:497]   --->   Operation 36 'write' 'write_ln497' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln498 = br void %if.end114.i" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:498]   --->   Operation 37 'br' 'br_ln498' <Predicate = (!ii_state_load & tmp_i)> <Delay = 0.00>
+ST_3 : Operation 38 [1/2] (0.00ns)   --->   "%write_ln506 = write void @_ssdm_op_Write.axis.volatile.i128P128A, i128 %m_axis_tx_data, i128 4999067643979024416495" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:506]   --->   Operation 38 'write' 'write_ln506' <Predicate = (ii_state_load)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln512 = br void %insert_icrc<64>.exit" [/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:512]   --->   Operation 39 'br' 'br_ln512' <Predicate = (ii_state_load)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 40 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.4ns, clock uncertainty: 1.73ns.
+
+ <State 1>: 4.04ns
+The critical path consists of the following:
+	fifo read operation ('tx_ip2crcFifo_read', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414) on port 'tx_ip2crcFifo' (/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:414) [16]  (2.34 ns)
+	'icmp' operation ('icmp_ln429', /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp:429) [25]  (0.861 ns)
+	multiplexor before 'phi' operation ('currWord.last.V') [34]  (0.844 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

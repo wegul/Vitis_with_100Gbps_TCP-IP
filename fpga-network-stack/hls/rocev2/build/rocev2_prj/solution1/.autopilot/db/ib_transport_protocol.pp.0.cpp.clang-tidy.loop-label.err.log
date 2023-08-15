@@ -1,0 +1,5 @@
+1 warning and 2 errors generated.
+Error while processing /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/ib_transport_protocol.pp.0.cpp.
+clang-tidy applied 24 of 24 suggested fixes.
+Suppressed 119 warnings (118 in non-user code, 1 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

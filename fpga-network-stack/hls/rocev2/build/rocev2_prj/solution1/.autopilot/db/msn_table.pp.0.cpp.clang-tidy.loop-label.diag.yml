@@ -1,0 +1,117 @@
+---
+MainSourceFile:  /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          56629
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          263701
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          264140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          264580
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          526375
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_1:  '
+    FileOffset:      135
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1937730
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_147_1:  '
+    FileOffset:      147
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1937929
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_147_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_159_1:  '
+    FileOffset:      159
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1938108
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_159_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_180_1:  '
+    FileOffset:      180
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1938408
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_180_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1938770
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_1:  '
+    FileOffset:      226
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1939077
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_250_1:  '
+    FileOffset:      250
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/axi_utils.hpp
+    Replacements:    
+      - FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/msn_table.pp.0.cpp
+        Offset:          1939472
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_250_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      42
+    FilePath:        /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/ib_transport_protocol/msn_table.cpp
+    Replacements:    
+...

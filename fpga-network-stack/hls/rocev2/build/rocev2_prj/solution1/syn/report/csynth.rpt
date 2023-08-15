@@ -1,0 +1,799 @@
+
+
+================================================================
+== Synthesis Summary Report of 'rocev2_top'
+================================================================
++ General Information: 
+    * Date:           Tue Aug 15 18:30:25 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        rocev2_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtex7
+    * Target device:  xc7vx690t-ffg1761-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+---------+------------+------------+-----+
+    |                      Modules                      |  Issue |       | Latency | Latency | Iteration|         | Trip |          |          |         |            |            |     |
+    |                      & Loops                      |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |     FF     |     LUT    | URAM|
+    +---------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+---------+------------+------------+-----+
+    |+ rocev2_top*                                      |  Timing|  -2.95|       45|  342.924|         -|        1|     -|  dataflow|  159 (5%)|  6 (~0%)|  26918 (3%)|  36734 (8%)|    -|
+    | + process_ipv4_64_s                               |  Timing|  -0.16|        2|   12.800|         -|        1|     -|       yes|         -|        -|   833 (~0%)|  3619 (~0%)|    -|
+    | + local_req_handler                               |  Timing|  -0.96|        1|    6.400|         -|        1|     -|       yes|         -|        -|   480 (~0%)|   989 (~0%)|    -|
+    | + entry_proc                                      |       -|   2.33|        0|    0.000|         -|        0|     -|        no|         -|        -|     2 (~0%)|    20 (~0%)|    -|
+    | + tx_pkg_arbiter_64_s                             |  Timing|  -1.64|        1|    6.400|         -|        1|     -|       yes|         -|        -|   600 (~0%)|   917 (~0%)|    -|
+    | + ipv4_drop_optional_ip_header_64_s               |  Timing|  -1.16|        1|    6.400|         -|        1|     -|       yes|         -|        -|   456 (~0%)|   188 (~0%)|    -|
+    | + process_udp_64_4                                |       -|   1.15|        2|   12.800|         -|        1|     -|       yes|         -|        -|   394 (~0%)|   162 (~0%)|    -|
+    | + udp_rshiftWordByOctet_net_axis_64_64_2_s        |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|   132 (~0%)|    37 (~0%)|    -|
+    | + merge_rx_meta                                   |       -|   1.85|        1|    6.400|         -|        1|     -|       yes|         -|        -|    86 (~0%)|    52 (~0%)|    -|
+    | + rx_process_ibh_64_s                             |  Timing|  -0.11|        2|   12.800|         -|        1|     -|       yes|         -|        -|   636 (~0%)|  2169 (~0%)|    -|
+    | + rshiftWordByOctet_net_axis_64_64_11_s           |       -|   0.13|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|    95 (~0%)|    -|
+    | + rx_process_exh_64_s                             |  Timing|  -0.95|        5|   32.000|         -|        1|     -|       yes|         -|  3 (~0%)|  2049 (~0%)|  3721 (~0%)|    -|
+    | + rx_ibh_fsm                                      |  Timing|  -0.34|        2|   12.800|         -|        1|     -|       yes|         -|        -|   573 (~0%)|   678 (~0%)|    -|
+    | + ipUdpMetaHandler_64_s                           |       -|   1.85|        1|    6.400|         -|        1|     -|       yes|         -|        -|   265 (~0%)|    72 (~0%)|    -|
+    | + rx_exh_fsm_64_s                                 |  Timing|  -0.25|        2|   12.800|         -|        1|     -|       yes|         -|        -|   906 (~0%)|  1211 (~0%)|    -|
+    | + handle_read_requests                            |  Timing|  -0.96|        1|    6.400|         -|        1|     -|       yes|         -|        -|   349 (~0%)|   489 (~0%)|    -|
+    | + stream_merger_ackEvent_s                        |       -|   2.33|        2|   12.800|         -|        1|     -|       yes|         -|        -|   157 (~0%)|    67 (~0%)|    -|
+    | + meta_merger                                     |       -|   0.30|        6|   38.400|         -|        1|     -|       yes|         -|  3 (~0%)|  2429 (~0%)|  1596 (~0%)|    -|
+    | + ipv4_lshiftWordByOctet_64_2_s                   |       -|   0.13|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|   167 (~0%)|    -|
+    | + drop_ooo_ibh_64_s                               |       -|   1.00|        1|    6.400|         -|        1|     -|       yes|         -|        -|   136 (~0%)|    68 (~0%)|    -|
+    | + ipv4_generate_ipv4_64_3                         |  Timing|  -2.95|        1|    7.621|         -|        1|     -|       yes|         -|        -|   450 (~0%)|  4056 (~0%)|    -|
+    | + rx_exh_payload_64_s                             |       -|   1.01|        1|    6.400|         -|        1|     -|       yes|         -|        -|   200 (~0%)|    80 (~0%)|    -|
+    | + lshiftWordByOctet_64_12_s                       |       -|   0.13|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|   167 (~0%)|    -|
+    | + lshiftWordByOctet_64_13_s                       |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|   132 (~0%)|    37 (~0%)|    -|
+    | + generate_exh_64_s                               |  Timing|  -2.93|        1|    7.597|         -|        1|     -|       yes|         -|        -|   574 (~0%)|  3825 (~0%)|    -|
+    | + qp_interface                                    |       -|   1.85|        1|    6.400|         -|        1|     -|       yes|         -|        -|   135 (~0%)|    82 (~0%)|    -|
+    | + generate_ibh_64_s                               |       -|   0.06|        1|    6.400|         -|        1|     -|       yes|         -|        -|   408 (~0%)|   222 (~0%)|    -|
+    | + split_tx_meta                                   |       -|   1.03|        1|    6.400|         -|        1|     -|       yes|         -|        -|    84 (~0%)|    69 (~0%)|    -|
+    | + rshiftWordByOctet_routed_net_axis_64_1_64_12_s  |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|   132 (~0%)|    37 (~0%)|    -|
+    | + rshiftWordByOctet_net_axis_64_64_13_s           |       -|   0.13|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|    95 (~0%)|    -|
+    | + append_payload_64_s                             |       -|   0.97|        1|    6.400|         -|        1|     -|       yes|         -|        -|   508 (~0%)|   199 (~0%)|    -|
+    | + mq_pointer_table_500_s                          |       -|   0.07|        3|   19.200|         -|        1|     -|       yes|   3 (~0%)|        -|   193 (~0%)|   198 (~0%)|    -|
+    | + mem_cmd_merger_64_s                             |       -|   0.45|        3|   19.200|         -|        1|     -|       yes|         -|        -|   455 (~0%)|   430 (~0%)|    -|
+    | + state_table                                     |  Timing|  -0.42|        4|   25.600|         -|        1|     -|       yes|   6 (~0%)|        -|   449 (~0%)|   435 (~0%)|    -|
+    | + udp_lshiftWordByOctet_64_1_s                    |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|   132 (~0%)|    37 (~0%)|    -|
+    | + merge_rx_pkgs_64_s                              |  Timing|  -0.26|        2|   12.800|         -|        1|     -|       yes|         -|        -|   345 (~0%)|   167 (~0%)|    -|
+    | + lshiftWordByOctet_64_11_s                       |       -|   0.13|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|   167 (~0%)|    -|
+    | + tx_ipUdpMetaMerger                              |       -|   1.85|        1|    6.400|         -|        1|     -|       yes|         -|        -|   189 (~0%)|   237 (~0%)|    -|
+    | + msn_table                                       |       -|   0.07|        3|   19.200|         -|        1|     -|       yes|   5 (~0%)|        -|   425 (~0%)|   243 (~0%)|    -|
+    | + mq_freelist_handler_2048_s                      |       -|   1.85|        1|    6.400|         -|        1|     -|       yes|         -|        -|    32 (~0%)|    73 (~0%)|    -|
+    | + mq_meta_table_ap_uint_64_2048_s                 |  Timing|  -0.42|        1|    6.400|         -|        1|     -|       yes|  12 (~0%)|        -|     6 (~0%)|    80 (~0%)|    -|
+    | + insert_icrc_64_s                                |       -|   0.63|        2|   12.800|         -|        1|     -|       yes|         -|        -|    82 (~0%)|   118 (~0%)|    -|
+    | + generate_udp_64_s                               |  Timing|  -2.95|        1|    7.621|         -|        1|     -|       yes|         -|        -|   354 (~0%)|   337 (~0%)|    -|
+    | + prepend_ibh_header_64_s                         |  Timing|  -2.95|        1|    7.621|         -|        1|     -|       yes|         -|        -|   386 (~0%)|  2438 (~0%)|    -|
+    | + conn_table                                      |       -|   0.07|        1|    6.400|         -|        1|     -|       yes|   6 (~0%)|        -|     4 (~0%)|    91 (~0%)|    -|
+    | + read_req_table                                  |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|     4 (~0%)|    41 (~0%)|    -|
+    | + mq_process_requests_ap_uint_64_s                |       -|   0.60|        1|    6.400|         -|        1|     -|       yes|         -|        -|   474 (~0%)|   430 (~0%)|    -|
+    | + extract_icrc_64_s                               |       -|   2.33|        1|    6.400|         -|        1|     -|       yes|         -|        -|   163 (~0%)|   166 (~0%)|    -|
+    | + Block_entry450_proc                             |       -|   4.67|        0|    0.000|         -|        0|     -|        no|         -|        -|     2 (~0%)|    11 (~0%)|    -|
+    +---------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+----------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++--------------------------+---------------+-------+--------+--------+
+| Interface                | Register Mode | TDATA | TREADY | TVALID |
++--------------------------+---------------+-------+--------+--------+
+| m_axis_mem_read_cmd      | both          | 192   | 1      | 1      |
+| m_axis_mem_write_cmd     | both          | 192   | 1      | 1      |
+| m_axis_mem_write_data    | both          | 128   | 1      | 1      |
+| m_axis_tx_data           | both          | 128   | 1      | 1      |
+| s_axis_mem_read_data     | both          | 128   | 1      | 1      |
+| s_axis_qp_conn_interface | both          | 184   | 1      | 1      |
+| s_axis_qp_interface      | both          | 168   | 1      | 1      |
+| s_axis_rx_data           | both          | 128   | 1      | 1      |
+| s_axis_tx_data           | both          | 128   | 1      | 1      |
++--------------------------+---------------+-------+--------+--------+
+
+* AP_FIFO
++----------------+------------+
+| Interface      | Data Width |
++----------------+------------+
+| s_axis_tx_meta | 184        |
++----------------+------------+
+
+* Other Ports
++------------------------+---------+----------+
+| Interface              | Mode    | Bitwidth |
++------------------------+---------+----------+
+| local_ip_address       | ap_none | 128      |
+| regCrcDropPkgCount     | ap_vld  | 32       |
+| regInvalidPsnDropCount | ap_vld  | 32       |
++------------------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------------------+-----------+------------------------------------+
+| Argument                 | Direction | Datatype                           |
++--------------------------+-----------+------------------------------------+
+| s_axis_rx_data           | in        | stream<net_axis<64>, 0>&           |
+| s_axis_tx_meta           | in        | stream<txMeta, 0>&                 |
+| s_axis_tx_data           | in        | stream<net_axis<64>, 0>&           |
+| m_axis_tx_data           | out       | stream<net_axis<64>, 0>&           |
+| m_axis_mem_write_cmd     | out       | stream<routedMemCmd, 0>&           |
+| m_axis_mem_read_cmd      | out       | stream<routedMemCmd, 0>&           |
+| m_axis_mem_write_data    | out       | stream<routed_net_axis<64, 1>, 0>& |
+| s_axis_mem_read_data     | in        | stream<net_axis<64>, 0>&           |
+| s_axis_qp_interface      | in        | stream<qpContext, 0>&              |
+| s_axis_qp_conn_interface | in        | stream<ifConnReq, 0>&              |
+| local_ip_address         | in        | ap_uint<128>                       |
+| regCrcDropPkgCount       | out       | ap_uint<32>&                       |
+| regInvalidPsnDropCount   | out       | ap_uint<32>&                       |
++--------------------------+-----------+------------------------------------+
+
+* SW-to-HW Mapping
++--------------------------+-------------------------------+-----------+
+| Argument                 | HW Interface                  | HW Type   |
++--------------------------+-------------------------------+-----------+
+| s_axis_rx_data           | s_axis_rx_data                | interface |
+| s_axis_tx_meta           | s_axis_tx_meta                | interface |
+| s_axis_tx_data           | s_axis_tx_data                | interface |
+| m_axis_tx_data           | m_axis_tx_data                | interface |
+| m_axis_mem_write_cmd     | m_axis_mem_write_cmd          | interface |
+| m_axis_mem_read_cmd      | m_axis_mem_read_cmd           | interface |
+| m_axis_mem_write_data    | m_axis_mem_write_data         | interface |
+| s_axis_mem_read_data     | s_axis_mem_read_data          | interface |
+| s_axis_qp_interface      | s_axis_qp_interface           | interface |
+| s_axis_qp_conn_interface | s_axis_qp_conn_interface      | interface |
+| local_ip_address         | local_ip_address              | port      |
+| regCrcDropPkgCount       | regCrcDropPkgCount            | port      |
+| regCrcDropPkgCount       | regCrcDropPkgCount_ap_vld     | port      |
+| regInvalidPsnDropCount   | regInvalidPsnDropCount        | port      |
+| regInvalidPsnDropCount   | regInvalidPsnDropCount_ap_vld | port      |
++--------------------------+-------------------------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + rocev2_top                         | 6   |        |                     |     |        |         |
+|  + process_ipv4_64_s                 | 0   |        |                     |     |        |         |
+|    add_ln58_fu_256_p2                | -   |        | add_ln58            | add | fabric | 0       |
+|    add_ln67_fu_271_p2                | -   |        | add_ln67            | add | fabric | 0       |
+|    rx_process2dropLengthFifo_din     | -   |        | sub_ln186           | sub | fabric | 0       |
+|    add_ln840_fu_481_p2               | -   |        | add_ln840           | add | fabric | 0       |
+|  + local_req_handler                 | 0   |        |                     |     |        |         |
+|    add_ln840_8_fu_433_p2             | -   |        | add_ln840_8         | add | fabric | 0       |
+|    add_ln840_9_fu_440_p2             | -   |        | add_ln840_9         | add | fabric | 0       |
+|    add_ln841_5_fu_447_p2             | -   |        | add_ln841_5         | add | fabric | 0       |
+|    add_ln840_fu_498_p2               | -   |        | add_ln840           | add | fabric | 0       |
+|    add_ln840_7_fu_505_p2             | -   |        | add_ln840_7         | add | fabric | 0       |
+|    add_ln841_fu_512_p2               | -   |        | add_ln841           | add | fabric | 0       |
+|  + tx_pkg_arbiter_64_s               | 0   |        |                     |     |        |         |
+|    grp_fu_693_p2                     | -   |        | add_ln840_5         | add | fabric | 0       |
+|    grp_fu_709_p2                     | -   |        | add_ln841_4         | add | fabric | 0       |
+|    grp_fu_693_p2                     | -   |        | add_ln840_4         | add | fabric | 0       |
+|    grp_fu_709_p2                     | -   |        | add_ln841_3         | add | fabric | 0       |
+|    grp_fu_693_p2                     | -   |        | add_ln840_3         | add | fabric | 0       |
+|    grp_fu_709_p2                     | -   |        | add_ln841_2         | add | fabric | 0       |
+|    grp_fu_693_p2                     | -   |        | add_ln840_2         | add | fabric | 0       |
+|    grp_fu_693_p2                     | -   |        | add_ln840_1         | add | fabric | 0       |
+|    grp_fu_709_p2                     | -   |        | add_ln841_1         | add | fabric | 0       |
+|    grp_fu_693_p2                     | -   |        | add_ln840           | add | fabric | 0       |
+|    grp_fu_709_p2                     | -   |        | add_ln841           | add | fabric | 0       |
+|  + ipv4_drop_optional_ip_header_64_s | 0   |        |                     |     |        |         |
+|    add_ln841_fu_256_p2               | -   |        | add_ln841           | add | fabric | 0       |
+|  + process_udp_64_4                  | 0   |        |                     |     |        |         |
+|    add_ln67_fu_185_p2                | -   |        | add_ln67            | add | fabric | 0       |
+|  + rx_process_ibh_64_s               | 0   |        |                     |     |        |         |
+|    add_ln58_fu_268_p2                | -   |        | add_ln58            | add | fabric | 0       |
+|    add_ln67_fu_283_p2                | -   |        | add_ln67            | add | fabric | 0       |
+|  + rx_process_exh_64_s               | 3   |        |                     |     |        |         |
+|    add_ln58_fu_490_p2                | -   |        | add_ln58            | add | fabric | 0       |
+|    add_ln67_1_fu_633_p2              | -   |        | add_ln67_1          | add | fabric | 0       |
+|    ret_V_fu_728_p2                   | -   |        | ret_V               | add | fabric | 0       |
+|    mul_33ns_35ns_66_3_1_U43          | 3   |        | mul_ln1513          | mul | auto   | 2       |
+|    add_ln67_fu_784_p2                | -   |        | add_ln67            | add | fabric | 0       |
+|  + rx_ibh_fsm                        | 0   |        |                     |     |        |         |
+|    add_ln34_fu_440_p2                | -   |        | add_ln34            | add | fabric | 0       |
+|    grp_fu_288_p2                     | -   |        | add_ln840           | add | fabric | 0       |
+|    grp_fu_288_p2                     | -   |        | add_ln840_6         | add | fabric | 0       |
+|    add_ln186_fu_721_p2               | -   |        | add_ln186           | add | fabric | 0       |
+|  + rx_exh_fsm_64_s                   | 0   |        |                     |     |        |         |
+|    payLoadLength_V_2_fu_681_p2       | -   |        | payLoadLength_V_2   | add | fabric | 0       |
+|    grp_fu_475_p2                     | -   |        | add_ln186           | add | fabric | 0       |
+|    add_ln186_1_fu_950_p2             | -   |        | add_ln186_1         | add | fabric | 0       |
+|    payLoadLength_V_fu_713_p2         | -   |        | payLoadLength_V     | add | fabric | 0       |
+|    add_ln186_7_fu_1011_p2            | -   |        | add_ln186_7         | add | fabric | 0       |
+|    grp_fu_475_p2                     | -   |        | add_ln186_5         | add | fabric | 0       |
+|    payLoadLength_V_5_fu_759_p2       | -   |        | payLoadLength_V_5   | add | fabric | 0       |
+|    remainingLength_V_fu_1131_p2      | -   |        | remainingLength_V   | sub | fabric | 0       |
+|    add_ln666_fu_765_p2               | -   |        | add_ln666           | add | fabric | 0       |
+|    grp_fu_475_p2                     | -   |        | add_ln186_3         | add | fabric | 0       |
+|    add_ln186_4_fu_1160_p2            | -   |        | add_ln186_4         | add | fabric | 0       |
+|    payLoadLength_V_4_fu_815_p2       | -   |        | payLoadLength_V_4   | add | fabric | 0       |
+|    remainingLength_V_1_fu_1223_p2    | -   |        | remainingLength_V_1 | sub | fabric | 0       |
+|    grp_fu_475_p2                     | -   |        | add_ln186_8         | add | fabric | 0       |
+|    add_ln186_9_fu_1395_p2            | -   |        | add_ln186_9         | add | fabric | 0       |
+|  + handle_read_requests              | 0   |        |                     |     |        |         |
+|    add_ln840_11_fu_321_p2            | -   |        | add_ln840_11        | add | fabric | 0       |
+|    add_ln841_6_fu_328_p2             | -   |        | add_ln841_6         | add | fabric | 0       |
+|    add_ln840_fu_357_p2               | -   |        | add_ln840           | add | fabric | 0       |
+|    add_ln841_fu_364_p2               | -   |        | add_ln841           | add | fabric | 0       |
+|    add_ln840_10_fu_432_p2            | -   |        | add_ln840_10        | add | fabric | 0       |
+|  + meta_merger                       | 3   |        |                     |     |        |         |
+|    ret_V_fu_327_p2                   | -   |        | ret_V               | add | fabric | 0       |
+|    mul_33ns_35ns_66_3_1_U114         | 3   |        | mul_ln1513          | mul | auto   | 2       |
+|  + ipv4_generate_ipv4_64_3           | 0   |        |                     |     |        |         |
+|    add_ln76_2_fu_290_p2              | -   |        | add_ln76_2          | add | fabric | 0       |
+|    grp_fu_244_p2                     | -   |        | add_ln85_2          | add | fabric | 0       |
+|    grp_fu_244_p2                     | -   |        | add_ln79_2          | add | fabric | 0       |
+|    add_ln76_fu_442_p2                | -   |        | add_ln76            | add | fabric | 0       |
+|    grp_fu_244_p2                     | -   |        | add_ln85            | add | fabric | 0       |
+|    grp_fu_244_p2                     | -   |        | add_ln79            | add | fabric | 0       |
+|    sub_ln80_fu_556_p2                | -   |        | sub_ln80            | sub | fabric | 0       |
+|    sub_ln80_3_fu_574_p2              | -   |        | sub_ln80_3          | sub | fabric | 0       |
+|    sub_ln80_4_fu_590_p2              | -   |        | sub_ln80_4          | sub | fabric | 0       |
+|    len_V_fu_663_p2                   | -   |        | len_V               | add | fabric | 0       |
+|  + generate_exh_64_s                 | 0   |        |                     |     |        |         |
+|    grp_fu_407_p2                     | -   |        | add_ln85_3          | add | fabric | 0       |
+|    grp_fu_536_p2                     | -   |        | add_ln186_13        | add | fabric | 0       |
+|    grp_fu_407_p2                     | -   |        | add_ln85            | add | fabric | 0       |
+|    add_ln186_14_fu_1483_p2           | -   |        | add_ln186_14        | add | fabric | 0       |
+|    add_ln76_4_fu_833_p2              | -   |        | add_ln76_4          | add | fabric | 0       |
+|    grp_fu_526_p2                     | -   |        | add_ln85_5          | add | fabric | 0       |
+|    grp_fu_531_p2                     | -   |        | add_ln79_4          | add | fabric | 0       |
+|    sub_ln80_9_fu_933_p2              | -   |        | sub_ln80_9          | sub | fabric | 0       |
+|    sub_ln80_10_fu_951_p2             | -   |        | sub_ln80_10         | sub | fabric | 0       |
+|    sub_ln80_11_fu_967_p2             | -   |        | sub_ln80_11         | sub | fabric | 0       |
+|    grp_fu_536_p2                     | -   |        | add_ln186           | add | fabric | 0       |
+|    add_ln76_fu_1076_p2               | -   |        | add_ln76            | add | fabric | 0       |
+|    grp_fu_526_p2                     | -   |        | add_ln85_4          | add | fabric | 0       |
+|    grp_fu_531_p2                     | -   |        | add_ln79            | add | fabric | 0       |
+|    sub_ln80_fu_1176_p2               | -   |        | sub_ln80            | sub | fabric | 0       |
+|    sub_ln80_7_fu_1194_p2             | -   |        | sub_ln80_7          | sub | fabric | 0       |
+|    sub_ln80_8_fu_1210_p2             | -   |        | sub_ln80_8          | sub | fabric | 0       |
+|    add_ln186_12_fu_1612_p2           | -   |        | add_ln186_12        | add | fabric | 0       |
+|  + generate_ibh_64_s                 | 0   |        |                     |     |        |         |
+|    nextPsn_V_fu_581_p2               | -   |        | nextPsn_V           | add | fabric | 0       |
+|    psn_V_fu_489_p2                   | -   |        | psn_V               | add | fabric | 0       |
+|  + split_tx_meta                     | 0   |        |                     |     |        |         |
+|    tempLen_V_fu_108_p2               | -   |        | tempLen_V           | add | fabric | 0       |
+|  + mem_cmd_merger_64_s               | 0   |        |                     |     |        |         |
+|    grp_fu_112_p2                     | -   |        | add_ln1513_2        | add | fabric | 0       |
+|    grp_fu_112_p2                     | -   |        | add_ln1513_1        | add | fabric | 0       |
+|    add_ln1513_fu_155_p2              | -   |        | add_ln1513          | add | fabric | 0       |
+|  + state_table                       | 0   |        |                     |     |        |         |
+|    add_ln186_fu_614_p2               | -   |        | add_ln186           | add | fabric | 0       |
+|  + mq_freelist_handler_2048_s        | 0   |        |                     |     |        |         |
+|    add_ln840_fu_84_p2                | -   |        | add_ln840           | add | fabric | 0       |
+|  + generate_udp_64_s                 | 0   |        |                     |     |        |         |
+|    add_ln76_3_fu_216_p2              | -   |        | add_ln76_3          | add | fabric | 0       |
+|    grp_fu_181_p2                     | -   |        | add_ln79_3          | add | fabric | 0       |
+|    add_ln76_fu_282_p2                | -   |        | add_ln76            | add | fabric | 0       |
+|    grp_fu_181_p2                     | -   |        | add_ln79            | add | fabric | 0       |
+|    sub_ln80_fu_318_p2                | -   |        | sub_ln80            | sub | fabric | 0       |
+|    sub_ln80_5_fu_336_p2              | -   |        | sub_ln80_5          | sub | fabric | 0       |
+|    sub_ln80_6_fu_352_p2              | -   |        | sub_ln80_6          | sub | fabric | 0       |
+|  + prepend_ibh_header_64_s           | 0   |        |                     |     |        |         |
+|    add_ln76_1_fu_240_p2              | -   |        | add_ln76_1          | add | fabric | 0       |
+|    grp_fu_198_p2                     | -   |        | add_ln85_1          | add | fabric | 0       |
+|    grp_fu_198_p2                     | -   |        | add_ln79_1          | add | fabric | 0       |
+|    add_ln76_fu_392_p2                | -   |        | add_ln76            | add | fabric | 0       |
+|    grp_fu_198_p2                     | -   |        | add_ln85            | add | fabric | 0       |
+|    grp_fu_198_p2                     | -   |        | add_ln79            | add | fabric | 0       |
+|    sub_ln80_fu_506_p2                | -   |        | sub_ln80            | sub | fabric | 0       |
+|    sub_ln80_1_fu_524_p2              | -   |        | sub_ln80_1          | sub | fabric | 0       |
+|    sub_ln80_2_fu_540_p2              | -   |        | sub_ln80_2          | sub | fabric | 0       |
++--------------------------------------+-----+--------+---------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------+------+------+--------+------------------------------------+---------+------+---------+
+| Name                                    | BRAM | URAM | Pragma | Variable                           | Storage | Impl | Latency |
++-----------------------------------------+------+------+--------+------------------------------------+---------+------+---------+
+| + rocev2_top                            | 159  | 0    |        |                                    |         |      |         |
+|   local_ip_address_c_U                  | -    | -    |        | local_ip_address_c                 | fifo    | srl  | 0       |
+|  + mq_pointer_table_500_s               | 3    | 0    |        |                                    |         |      |         |
+|    ptr_table_head_V_U                   | 1    | -    | pragma | ptr_table_head_V                   | ram_t2p | bram | 1       |
+|    ptr_table_tail_V_U                   | 1    | -    | pragma | ptr_table_tail_V                   | ram_t2p | bram | 1       |
+|    ptr_table_valid_U                    | 1    | -    | pragma | ptr_table_valid                    | ram_t2p | bram | 1       |
+|  + state_table                          | 6    | 0    |        |                                    |         |      |         |
+|    state_table_req_old_unack_V_U        | 1    | -    | pragma | state_table_req_old_unack_V        | ram_2p  | bram | 1       |
+|    state_table_resp_epsn_V_U            | 1    | -    | pragma | state_table_resp_epsn_V            | ram_2p  | bram | 1       |
+|    state_table_retryCounter_V_U         | 1    | -    | pragma | state_table_retryCounter_V         | ram_2p  | bram | 1       |
+|    state_table_resp_old_outstanding_V_U | 1    | -    | pragma | state_table_resp_old_outstanding_V | ram_2p  | bram | 1       |
+|    state_table_req_next_psn_V_U         | 1    | -    | pragma | state_table_req_next_psn_V         | ram_2p  | bram | 1       |
+|    state_table_req_old_valid_V_U        | 1    | -    | pragma | state_table_req_old_valid_V        | ram_2p  | bram | 1       |
+|  + msn_table                            | 5    | 0    |        |                                    |         |      |         |
+|    msn_table_msn_V_U                    | 1    | -    | pragma | msn_table_msn_V                    | ram_2p  | bram | 1       |
+|    msn_table_vaddr_V_U                  | 2    | -    | pragma | msn_table_vaddr_V                  | ram_2p  | bram | 1       |
+|    msn_table_dma_length_V_U             | 1    | -    | pragma | msn_table_dma_length_V             | ram_2p  | bram | 1       |
+|    msn_table_r_key_V_U                  | 1    | -    | pragma | msn_table_r_key_V                  | ram_2p  | bram | 1       |
+|  + mq_meta_table_ap_uint_64_2048_s      | 12   | 0    |        |                                    |         |      |         |
+|    meta_table_value_V_U                 | 8    | -    | pragma | meta_table_value_V                 | ram_t2p | bram | 1       |
+|    meta_table_next_V_U                  | 2    | -    | pragma | meta_table_next_V                  | ram_t2p | bram | 1       |
+|    meta_table_valid_U                   | 1    | -    | pragma | meta_table_valid                   | ram_t2p | bram | 1       |
+|    meta_table_isTail_U                  | 1    | -    | pragma | meta_table_isTail                  | ram_t2p | bram | 1       |
+|  + conn_table                           | 6    | 0    |        |                                    |         |      |         |
+|    conn_table_remote_qpn_V_U            | 1    | -    |        | conn_table_remote_qpn_V            | ram_1p  | auto | 1       |
+|    conn_table_remote_ip_address_V_U     | 4    | -    |        | conn_table_remote_ip_address_V     | ram_1p  | auto | 1       |
+|    conn_table_remote_udp_port_V_U       | 1    | -    |        | conn_table_remote_udp_port_V       | ram_1p  | auto | 1       |
++-----------------------------------------+------+------+--------+------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++----------+-------------------------------------------------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+
+| Type     | Options                                                                       | Location                                            | Messages                                                                                 |
++----------+-------------------------------------------------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+
+| resource | core=AXI4Stream variable=s_axis_rx_data metadata="-bus_bundle s_axis_rx_data" | ../../ipv6/ipv6.cpp:179 in ipv6_top, s_axis_rx_data | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
+| resource | core=AXI4Stream variable=m_axis_rx_meta metadata="-bus_bundle m_axis_rx_meta" | ../../ipv6/ipv6.cpp:180 in ipv6_top, m_axis_rx_meta | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
+| resource | core=AXI4Stream variable=m_axis_rx_data metadata="-bus_bundle m_axis_rx_data" | ../../ipv6/ipv6.cpp:181 in ipv6_top, m_axis_rx_data | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
+| resource | core=AXI4Stream variable=s_axis_tx_meta metadata="-bus_bundle s_axis_tx_meta" | ../../ipv6/ipv6.cpp:182 in ipv6_top, s_axis_tx_meta | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
+| resource | core=AXI4Stream variable=s_axis_tx_data metadata="-bus_bundle s_axis_tx_data" | ../../ipv6/ipv6.cpp:183 in ipv6_top, s_axis_tx_data | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
+| resource | core=AXI4Stream variable=m_axis_tx_data metadata="-bus_bundle m_axis_tx_data" | ../../ipv6/ipv6.cpp:184 in ipv6_top, m_axis_tx_data | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead               |
+|          |                                                                               |                                                     | '#pragma HLS RESOURCE core=axi' is obsoleted and replaced by '#pragma HLS INTERFACE axi' |
++----------+-------------------------------------------------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++--------------+-----------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| Type         | Options                                             | Location                                                                                             |
++--------------+-----------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| inline       |                                                     | ../../axi_utils.cpp:188 in keeptolen                                                                 |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:76 in convert_net_axis_to_axis                                                   |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:96 in convert_axis_to_net_axis                                                   |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:115 in convert_routed_net_axis_to_axis                                           |
+| unroll       |                                                     | ../../axi_utils.hpp:137 in reverse                                                                   |
+| unroll       |                                                     | ../../axi_utils.hpp:149 in reverse_bits                                                              |
+| inline       |                                                     | ../../axi_utils.hpp:318 in increasestreamwidth                                                       |
+| inline       |                                                     | ../../axi_utils.hpp:348 in reducestreamwidth                                                         |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:411 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:412 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:423 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:424 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:432 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:433 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:441 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:442 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:450 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:451 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:459 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:460 in convertstreamwidth                                                        |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:468 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:469 in convertstreamwidth                                                        |
+| inline       | off                                                 | ../../axi_utils.hpp:493 in rshiftwordbyoctet                                                         |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:494 in rshiftwordbyoctet                                                         |
+| inline       | off                                                 | ../../axi_utils.hpp:568 in lshiftwordbyoctet                                                         |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:569 in lshiftwordbyoctet                                                         |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:637 in stream_merger                                                             |
+| inline       | off                                                 | ../../axi_utils.hpp:638 in stream_merger                                                             |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:656 in stream_merger                                                             |
+| inline       | off                                                 | ../../axi_utils.hpp:657 in stream_merger                                                             |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:718 in fair_merger                                                               |
+| inline       | off                                                 | ../../axi_utils.hpp:719 in fair_merger                                                               |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:752 in fair_pkg_merger                                                           |
+| inline       | off                                                 | ../../axi_utils.hpp:753 in fair_pkg_merger                                                           |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:834 in stream_pkg_merger                                                         |
+| inline       | off                                                 | ../../axi_utils.hpp:835 in stream_pkg_merger                                                         |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:913 in stream_pkg_splitter                                                       |
+| inline       | off                                                 | ../../axi_utils.hpp:914 in stream_pkg_splitter                                                       |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:978 in pass_valid_pkg                                                            |
+| inline       | off                                                 | ../../axi_utils.hpp:979 in pass_valid_pkg                                                            |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1040 in toe_duplicate_stream                                                     |
+| inline       | off                                                 | ../../axi_utils.hpp:1041 in toe_duplicate_stream                                                     |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1056 in ip_handler_duplicate_stream                                              |
+| inline       | off                                                 | ../../axi_utils.hpp:1057 in ip_handler_duplicate_stream                                              |
+| inline       | off                                                 | ../../axi_utils.hpp:1095 in udp_lshiftwordbyoctet                                                    |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1096 in udp_lshiftwordbyoctet                                                    |
+| inline       | off                                                 | ../../axi_utils.hpp:1166 in mac_lshiftwordbyoctet                                                    |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1167 in mac_lshiftwordbyoctet                                                    |
+| inline       | off                                                 | ../../axi_utils.hpp:1237 in ipv4_lshiftwordbyoctet                                                   |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1238 in ipv4_lshiftwordbyoctet                                                   |
+| inline       | off                                                 | ../../axi_utils.hpp:1308 in ip_handler_rshiftwordbyoctet                                             |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1309 in ip_handler_rshiftwordbyoctet                                             |
+| inline       | off                                                 | ../../axi_utils.hpp:1383 in udp_rshiftwordbyoctet                                                    |
+| pipeline     | II=1                                                | ../../axi_utils.hpp:1384 in udp_rshiftwordbyoctet                                                    |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/conn_table.cpp:36 in conn_table                                          |
+| inline       | off                                                 | ../../ib_transport_protocol/conn_table.cpp:37 in conn_table                                          |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:46 in rx_process_ibh                           |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:47 in rx_process_ibh                           |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:85 in rx_process_exh                           |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:86 in rx_process_exh                           |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:284 in rx_ibh_fsm                              |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:285 in rx_ibh_fsm                              |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:449 in drop_ooo_ibh                            |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:450 in drop_ooo_ibh                            |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:542 in rx_exh_fsm                              |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:543 in rx_exh_fsm                              |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:801 in rx_exh_payload                          |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:802 in rx_exh_payload                          |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:858 in handle_read_requests                    |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:859 in handle_read_requests                    |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:936 in generate_ibh                            |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:937 in generate_ibh                            |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1038 in generate_exh                           |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1039 in generate_exh                           |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1382 in append_payload                         |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1383 in append_payload                         |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1529 in prepend_ibh_header                     |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1530 in prepend_ibh_header                     |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1626 in local_req_handler                      |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1627 in local_req_handler                      |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1755 in fpga_data_handler                      |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1756 in fpga_data_handler                      |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1788 in meta_merger                            |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1789 in meta_merger                            |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1855 in ipudpmetahandler                       |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1856 in ipudpmetahandler                       |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1886 in tx_ipudpmetamerger                     |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1887 in tx_ipudpmetamerger                     |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1907 in qp_interface                           |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1908 in qp_interface                           |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1944 in three_merger                           |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1945 in three_merger                           |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:1967 in mem_cmd_merger                         |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:1968 in mem_cmd_merger                         |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2007 in merge_retrans_request                  |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2008 in merge_retrans_request                  |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2028 in merge_rx_pkgs                          |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2029 in merge_rx_pkgs                          |
+| inline       | off                                                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2108 in tx_pkg_arbiter                         |
+| pipeline     | II = 1                                              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2109 in tx_pkg_arbiter                         |
+| inline       |                                                     | ../../ib_transport_protocol/ib_transport_protocol.cpp:2321 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibh2shiftFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2336 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_shift2exhFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2337 in ib_transport_protocol                  |
+| stream       | depth = 32 variable = rx_exh2dropFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2338 in ib_transport_protocol                  |
+| stream       | depth = 32 variable = rx_ibhDrop2exhFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2339 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibh2fsm_MetaFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2340 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_fsm2exh_MetaFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2341 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_exh2rethShiftFifo           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2342 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_exh2aethShiftFifo           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2343 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_exhNoShiftFifo              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2344 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_rethSift2mergerFifo         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2345 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_aethSift2mergerFifo         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2346 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_pkgSplitTypeFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2347 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_pkgShiftTypeFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2348 in ib_transport_protocol                  |
+| aggregate    | variable = rx_ibh2fsm_MetaFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2349 in ib_transport_protocol                  |
+| aggregate    | variable = rx_fsm2exh_MetaFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2350 in ib_transport_protocol                  |
+| aggregate    | variable = rx_pkgSplitTypeFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2351 in ib_transport_protocol                  |
+| aggregate    | variable = rx_pkgShiftTypeFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2352 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibhEventFifo                | ../../ib_transport_protocol/ib_transport_protocol.cpp:2357 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_exhEventMetaFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2358 in ib_transport_protocol                  |
+| stream       | depth = 512 variable = rx_remoteMemCmd              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2359 in ib_transport_protocol                  |
+| aggregate    | variable = rx_ibhEventFifo compact = bit            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2360 in ib_transport_protocol                  |
+| aggregate    | variable = rx_exhEventMetaFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2361 in ib_transport_protocol                  |
+| aggregate    | variable = rx_remoteMemCmd compact = bit            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2362 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = tx_ibhMetaFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2368 in ib_transport_protocol                  |
+| stream       | depth = 32 variable = tx_appMetaFifo                | ../../ib_transport_protocol/ib_transport_protocol.cpp:2369 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = tx_appDataFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2371 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_exhMetaFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2382 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_exh2shiftFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2383 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = tx_shift2ibhFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2384 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_aethShift2payFifo           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2385 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_rethShift2payFifo           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2386 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_rawPayFifo                  | ../../ib_transport_protocol/ib_transport_protocol.cpp:2387 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_exh2payFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2388 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_ibhHeaderFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2389 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_localMemCmdFifo             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2390 in ib_transport_protocol                  |
+| aggregate    | variable = tx_exhMetaFifo compact = bit             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2391 in ib_transport_protocol                  |
+| aggregate    | variable = tx_ibhHeaderFifo compact = bit           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2392 in ib_transport_protocol                  |
+| aggregate    | variable = tx_localMemCmdFifo compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2393 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_packetInfoFifo              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2397 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_lengthFifo                  | ../../ib_transport_protocol/ib_transport_protocol.cpp:2398 in ib_transport_protocol                  |
+| aggregate    | variable = tx_packetInfoFifo compact = bit          | ../../ib_transport_protocol/ib_transport_protocol.cpp:2399 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibhDropFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2403 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibhDropMetaFifo             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2404 in ib_transport_protocol                  |
+| aggregate    | variable = rx_ibhDropMetaFifo compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2405 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_ibhconnTable_req            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2412 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = tx_connTable2ibh_rsp           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2413 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rxIbh2stateTable_upd_req       | ../../ib_transport_protocol/ib_transport_protocol.cpp:2423 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = txIbh2stateTable_upd_req       | ../../ib_transport_protocol/ib_transport_protocol.cpp:2424 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = qpi2stateTable_upd_req         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2425 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = stateTable2rxIbh_rsp           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2426 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = stateTable2txIbh_rsp           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2427 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = stateTable2qpi_rsp             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2428 in ib_transport_protocol                  |
+| aggregate    | variable = rxIbh2stateTable_upd_req compact = bit   | ../../ib_transport_protocol/ib_transport_protocol.cpp:2429 in ib_transport_protocol                  |
+| aggregate    | variable = txIbh2stateTable_upd_req compact = bit   | ../../ib_transport_protocol/ib_transport_protocol.cpp:2430 in ib_transport_protocol                  |
+| aggregate    | variable = qpi2stateTable_upd_req compact = bit     | ../../ib_transport_protocol/ib_transport_protocol.cpp:2431 in ib_transport_protocol                  |
+| aggregate    | variable = stateTable2rxIbh_rsp compact = bit       | ../../ib_transport_protocol/ib_transport_protocol.cpp:2432 in ib_transport_protocol                  |
+| aggregate    | variable = stateTable2txIbh_rsp compact = bit       | ../../ib_transport_protocol/ib_transport_protocol.cpp:2433 in ib_transport_protocol                  |
+| aggregate    | variable = stateTable2qpi_rsp compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2434 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rxExh2msnTable_upd_req         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2442 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = txExh2msnTable_req             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2443 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = if2msnTable_init               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2444 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = msnTable2rxExh_rsp             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2445 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = msnTable2txExh_rsp             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2446 in ib_transport_protocol                  |
+| aggregate    | variable = rxExh2msnTable_upd_req compact = bit     | ../../ib_transport_protocol/ib_transport_protocol.cpp:2447 in ib_transport_protocol                  |
+| aggregate    | variable = if2msnTable_init compact = bit           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2448 in ib_transport_protocol                  |
+| aggregate    | variable = msnTable2rxExh_rsp compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2449 in ib_transport_protocol                  |
+| aggregate    | variable = msnTable2txExh_rsp compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2450 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = exh_lengthFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2456 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = rx_readRequestFifo             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2457 in ib_transport_protocol                  |
+| stream       | depth = 512 variable = rx_readEvenFifo              | ../../ib_transport_protocol/ib_transport_protocol.cpp:2458 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = rx_ackEventFifo                | ../../ib_transport_protocol/ib_transport_protocol.cpp:2459 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readRequestFifo compact = bit         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2460 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readEvenFifo compact = bit            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2461 in ib_transport_protocol                  |
+| aggregate    | variable = rx_ackEventFifo compact = bit            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2462 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_readReqTable_upd            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2468 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_readReqTable_upd_req        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2469 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_readReqTable_upd_rsp        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2470 in ib_transport_protocol                  |
+| aggregate    | variable = tx_readReqTable_upd compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2471 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readReqTable_upd_req compact = bit    | ../../ib_transport_protocol/ib_transport_protocol.cpp:2472 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readReqTable_upd_rsp compact = bit    | ../../ib_transport_protocol/ib_transport_protocol.cpp:2473 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_readReqAddr_push            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2480 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_readReqAddr_pop_req         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2481 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_readReqAddr_pop_rsp         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2482 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readReqAddr_pop_req compact = bit     | ../../ib_transport_protocol/ib_transport_protocol.cpp:2483 in ib_transport_protocol                  |
+| aggregate    | variable = rx_readReqAddr_pop_rsp compact = bit     | ../../ib_transport_protocol/ib_transport_protocol.cpp:2484 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = tx_dstQpFifo                   | ../../ib_transport_protocol/ib_transport_protocol.cpp:2512 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_ibh2exh_MetaFifo            | ../../ib_transport_protocol/ib_transport_protocol.cpp:2524 in ib_transport_protocol                  |
+| stream       | depth = 8 variable = rx_exh2drop_MetaFifo           | ../../ib_transport_protocol/ib_transport_protocol.cpp:2525 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_drop2exhFsm_MetaFifo        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2526 in ib_transport_protocol                  |
+| stream       | depth = 2 variable = rx_exhMetaFifo                 | ../../ib_transport_protocol/ib_transport_protocol.cpp:2527 in ib_transport_protocol                  |
+| aggregate    | variable = rx_ibh2exh_MetaFifo compact = bit        | ../../ib_transport_protocol/ib_transport_protocol.cpp:2528 in ib_transport_protocol                  |
+| aggregate    | variable = rx_exh2drop_MetaFifo compact = bit       | ../../ib_transport_protocol/ib_transport_protocol.cpp:2529 in ib_transport_protocol                  |
+| aggregate    | variable = rx_drop2exhFsm_MetaFifo compact = bit    | ../../ib_transport_protocol/ib_transport_protocol.cpp:2530 in ib_transport_protocol                  |
+| aggregate    | variable = rx_exhMetaFifo compact = bit             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2531 in ib_transport_protocol                  |
+| stream       | depth = 128 variable = tx_pkgInfoFifo               | ../../ib_transport_protocol/ib_transport_protocol.cpp:2627 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_split2aethShift             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2629 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_split2rethMerge             | ../../ib_transport_protocol/ib_transport_protocol.cpp:2630 in ib_transport_protocol                  |
+| stream       | depth = 4 variable = tx_rethMerge2rethShift         | ../../ib_transport_protocol/ib_transport_protocol.cpp:2631 in ib_transport_protocol                  |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/msn_table.cpp:38 in msn_table                                            |
+| inline       | off                                                 | ../../ib_transport_protocol/msn_table.cpp:39 in msn_table                                            |
+| bind_storage | variable=msn_table type=RAM_2P impl=BRAM            | ../../ib_transport_protocol/msn_table.cpp:42 in msn_table, msn_table                                 |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:123 in mq_pointer_table                      |
+| inline       | off                                                 | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:124 in mq_pointer_table                      |
+| bind_storage | variable=ptr_table type=RAM_T2P impl=BRAM           | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:127 in mq_pointer_table, ptr_table           |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:179 in mq_freelist_handler                   |
+| inline       | off                                                 | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:180 in mq_freelist_handler                   |
+| reset        | variable=freeListCounter                            | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:183 in mq_freelist_handler, freeListCounter  |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:200 in mq_meta_table                         |
+| inline       | off                                                 | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:201 in mq_meta_table                         |
+| bind_storage | variable=meta_table type=RAM_T2P impl=BRAM          | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:204 in mq_meta_table, meta_table             |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:246 in mq_process_requests                   |
+| inline       | off                                                 | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:247 in mq_process_requests                   |
+| dataflow     | disable_start_propagation                           | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:527 in multi_queue                           |
+| inline       |                                                     | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:528 in multi_queue                           |
+| stream       | depth=2 variable=mq_pointerReqFifo                  | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:533 in multi_queue, mq_pointerReqFifo        |
+| stream       | depth=2 variable=mq_pointerUpdFifo                  | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:534 in multi_queue, mq_pointerUpdFifo        |
+| stream       | depth=2 variable=mq_pointerRspFifo                  | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:535 in multi_queue, mq_pointerRspFifo        |
+| stream       | depth=2 variable=mq_metaReqFifo                     | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:540 in multi_queue, mq_metaReqFifo           |
+| stream       | depth=2 variable=mq_metaRspFifo                     | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:541 in multi_queue, mq_metaRspFifo           |
+| stream       | depth=MULTI_QUEUE_SIZE variable=mq_freeListFifo     | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:547 in multi_queue, mq_freeListFifo          |
+| stream       | depth=2 variable=mq_releaseFifo                     | ../../ib_transport_protocol/multi_queue/multi_queue.hpp:548 in multi_queue, mq_releaseFifo           |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/read_req_table.cpp:40 in read_req_table                                  |
+| inline       | off                                                 | ../../ib_transport_protocol/read_req_table.cpp:41 in read_req_table                                  |
+| bind_storage | variable=req_table type=RAM_2P impl=BRAM            | ../../ib_transport_protocol/read_req_table.cpp:44 in read_req_table, req_table                       |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:41 in retrans_pointer_table              |
+| inline       | off                                                 | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:42 in retrans_pointer_table              |
+| bind_storage | variable=ptr_table type=RAM_T2P impl=BRAM           | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:45 in retrans_pointer_table, ptr_table   |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:296 in retrans_meta_table                |
+| inline       | off                                                 | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:297 in retrans_meta_table                |
+| bind_storage | variable=meta_table type=RAM_T2P impl=BRAM          | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:300 in retrans_meta_table, meta_table    |
+| dependence   | variable=meta_table inter false                     | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:301 in retrans_meta_table, meta_table    |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:470 in process_retransmissions           |
+| inline       | off                                                 | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:471 in process_retransmissions           |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:760 in freelist_handler                  |
+| inline       | off                                                 | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:761 in freelist_handler                  |
+| reset        | variable=freeListCounter                            | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:764 in freelist_handler, freeListCounter |
+| inline       |                                                     | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:786 in retransmitter                     |
+| stream       | depth=2 variable=rt_pointerReqFifo                  | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:791 in retransmitter, rt_pointerReqFifo  |
+| stream       | depth=2 variable=rt_pointerUpdFifo                  | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:792 in retransmitter, rt_pointerUpdFifo  |
+| stream       | depth=2 variable=rt_pointerRspFifo                  | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:793 in retransmitter, rt_pointerRspFifo  |
+| stream       | depth=2 variable=rt_metaReqFifo                     | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:798 in retransmitter, rt_metaReqFifo     |
+| stream       | depth=2 variable=rt_metaRspFifo                     | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:799 in retransmitter, rt_metaRspFifo     |
+| stream       | depth=META_TABLE_SIZE variable=rt_freeListFifo      | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:804 in retransmitter, rt_freeListFifo    |
+| stream       | depth=2 variable=rt_releaseFifo                     | ../../ib_transport_protocol/retransmitter/retransmitter.cpp:806 in retransmitter, rt_releaseFifo     |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/state_table.cpp:39 in state_table                                        |
+| inline       | off                                                 | ../../ib_transport_protocol/state_table.cpp:40 in state_table                                        |
+| bind_storage | variable=state_table type=RAM_2P impl=BRAM          | ../../ib_transport_protocol/state_table.cpp:43 in state_table, state_table                           |
+| pipeline     | II=1                                                | ../../ib_transport_protocol/transport_timer.cpp:44 in transport_timer                                |
+| inline       | off                                                 | ../../ib_transport_protocol/transport_timer.cpp:45 in transport_timer                                |
+| bind_storage | variable=transportTimerTable type=RAM_T2P impl=BRAM | ../../ib_transport_protocol/transport_timer.cpp:48 in transport_timer, transportTimerTable           |
+| aggregate    | variable=transportTimerTable compact=bit            | ../../ib_transport_protocol/transport_timer.cpp:49 in transport_timer, transportTimerTable           |
+| dependence   | variable=transportTimerTable inter false            | ../../ib_transport_protocol/transport_timer.cpp:50 in transport_timer, transportTimerTable           |
+| inline       | off                                                 | ../../ipv4/ipv4.cpp:36 in process_ipv4                                                               |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.cpp:37 in process_ipv4                                                               |
+| inline       | off                                                 | ../../ipv4/ipv4.cpp:79 in generate_ipv4                                                              |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.cpp:80 in generate_ipv4                                                              |
+| inline       | off                                                 | ../../ipv4/ipv4.cpp:164 in ipv4_generate_ipv4                                                        |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.cpp:165 in ipv4_generate_ipv4                                                        |
+| inline       |                                                     | ../../ipv4/ipv4.cpp:253 in ipv4                                                                      |
+| stream       | depth=2 variable=rx_process2dropLengthFifo          | ../../ipv4/ipv4.cpp:262 in ipv4, rx_process2dropLengthFifo                                           |
+| stream       | depth=8 variable=rx_process2dropFifo                | ../../ipv4/ipv4.cpp:263 in ipv4, rx_process2dropFifo                                                 |
+| stream       | depth=8 variable=tx_shift2ipv4Fifo                  | ../../ipv4/ipv4.cpp:264 in ipv4, tx_shift2ipv4Fifo                                                   |
+| dataflow     | disable_start_propagation                           | ../../ipv4/ipv4.cpp:289 in ipv4_top                                                                  |
+| interface    | ap_ctrl_none port=return                            | ../../ipv4/ipv4.cpp:290 in ipv4_top, return                                                          |
+| interface    | axis register port=s_axis_rx_data                   | ../../ipv4/ipv4.cpp:292 in ipv4_top, s_axis_rx_data                                                  |
+| interface    | axis register port=m_axis_rx_meta                   | ../../ipv4/ipv4.cpp:293 in ipv4_top, m_axis_rx_meta                                                  |
+| interface    | axis register port=m_axis_rx_data                   | ../../ipv4/ipv4.cpp:294 in ipv4_top, m_axis_rx_data                                                  |
+| interface    | axis register port=s_axis_tx_meta                   | ../../ipv4/ipv4.cpp:295 in ipv4_top, s_axis_tx_meta                                                  |
+| interface    | axis register port=s_axis_tx_data                   | ../../ipv4/ipv4.cpp:296 in ipv4_top, s_axis_tx_data                                                  |
+| interface    | axis register port=m_axis_tx_data                   | ../../ipv4/ipv4.cpp:297 in ipv4_top, m_axis_tx_data                                                  |
+| aggregate    | variable=m_axis_rx_meta compact=bit                 | ../../ipv4/ipv4.cpp:298 in ipv4_top, m_axis_rx_meta                                                  |
+| aggregate    | variable=s_axis_tx_meta compact=bit                 | ../../ipv4/ipv4.cpp:299 in ipv4_top, s_axis_tx_meta                                                  |
+| interface    | ap_none register port=local_ipv4_address            | ../../ipv4/ipv4.cpp:300 in ipv4_top, local_ipv4_address                                              |
+| interface    | ap_none register port=protocol                      | ../../ipv4/ipv4.cpp:301 in ipv4_top, protocol                                                        |
+| stream       | depth=2 variable=s_axis_rx_data_internal            | ../../ipv4/ipv4.cpp:304 in ipv4_top, s_axis_rx_data_internal                                         |
+| stream       | depth=2 variable=s_axis_tx_data_internal            | ../../ipv4/ipv4.cpp:306 in ipv4_top, s_axis_tx_data_internal                                         |
+| stream       | depth=2 variable=m_axis_rx_data_internal            | ../../ipv4/ipv4.cpp:308 in ipv4_top, m_axis_rx_data_internal                                         |
+| stream       | depth=2 variable=m_axis_tx_data_internal            | ../../ipv4/ipv4.cpp:310 in ipv4_top, m_axis_tx_data_internal                                         |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:58 in drop_optional_ip_header                                                    |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:59 in drop_optional_ip_header                                                    |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:200 in ipv4_drop_optional_ip_header                                              |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:201 in ipv4_drop_optional_ip_header                                              |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:372 in toe_check_ipv4_checksum                                                   |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:373 in toe_check_ipv4_checksum                                                   |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:383 in toe_check_ipv4_checksum                                                   |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:393 in toe_check_ipv4_checksum                                                   |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:403 in toe_check_ipv4_checksum                                                   |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:429 in ip_handler_check_ipv4_checksum                                            |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:430 in ip_handler_check_ipv4_checksum                                            |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:440 in ip_handler_check_ipv4_checksum                                            |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:450 in ip_handler_check_ipv4_checksum                                            |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:460 in ip_handler_check_ipv4_checksum                                            |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:484 in finalize_ipv4_checksum                                                    |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:485 in finalize_ipv4_checksum                                                    |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:495 in finalize_ipv4_checksum                                                    |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:505 in finalize_ipv4_checksum                                                    |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:515 in finalize_ipv4_checksum                                                    |
+| pipeline     | II=1                                                | ../../ipv4/ipv4.hpp:540 in mac_finalize_ipv4_checksum                                                |
+| inline       | off                                                 | ../../ipv4/ipv4.hpp:541 in mac_finalize_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:551 in mac_finalize_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:561 in mac_finalize_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4.hpp:571 in mac_finalize_ipv4_checksum                                                |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:34 in compute_ipv4_checksum                                                |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:35 in compute_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:55 in compute_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:67 in compute_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:89 in compute_ipv4_checksum                                                |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:102 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:121 in compute_ipv4_checksum                                               |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:134 in compute_ipv4_checksum                                               |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:135 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:155 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:177 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:190 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:203 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:216 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:235 in compute_ipv4_checksum                                               |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:248 in compute_ipv4_checksum                                               |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:249 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:269 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:302 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:315 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:328 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:341 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:354 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:367 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:380 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:393 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:412 in compute_ipv4_checksum                                               |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:426 in compute_ipv4_checksum                                               |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:427 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:446 in compute_ipv4_checksum                                               |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:465 in compute_ipv4_checksum                                               |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:479 in mac_compute_ipv4_checksum                                           |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:480 in mac_compute_ipv4_checksum                                           |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:499 in mac_compute_ipv4_checksum                                           |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:518 in mac_compute_ipv4_checksum                                           |
+| pipeline     | II=1                                                | ../../ipv4/ipv4_utils.cpp:531 in ip_handler_compute_ipv4_checksum                                    |
+| inline       | off                                                 | ../../ipv4/ipv4_utils.cpp:532 in ip_handler_compute_ipv4_checksum                                    |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:551 in ip_handler_compute_ipv4_checksum                                    |
+| unroll       |                                                     | ../../ipv4/ipv4_utils.cpp:570 in ip_handler_compute_ipv4_checksum                                    |
+| inline       | off                                                 | ../../ipv6/ipv6.cpp:36 in process_ipv6                                                               |
+| pipeline     | II=1                                                | ../../ipv6/ipv6.cpp:37 in process_ipv6                                                               |
+| inline       | off                                                 | ../../ipv6/ipv6.cpp:72 in generate_ipv6                                                              |
+| pipeline     | II=1                                                | ../../ipv6/ipv6.cpp:73 in generate_ipv6                                                              |
+| inline       |                                                     | ../../ipv6/ipv6.cpp:145 in ipv6                                                                      |
+| stream       | depth=8 variable=rx_ipv62shiftFifo                  | ../../ipv6/ipv6.cpp:152 in ipv6, rx_ipv62shiftFifo                                                   |
+| stream       | depth=8 variable=tx_shift2ipv6Fifo                  | ../../ipv6/ipv6.cpp:161 in ipv6, tx_shift2ipv6Fifo                                                   |
+| dataflow     | disable_start_propagation                           | ../../ipv6/ipv6.cpp:176 in ipv6_top                                                                  |
+| interface    | ap_ctrl_none port=return                            | ../../ipv6/ipv6.cpp:177 in ipv6_top, return                                                          |
+| aggregate    | variable=m_axis_rx_meta compact=bit                 | ../../ipv6/ipv6.cpp:185 in ipv6_top, m_axis_rx_meta                                                  |
+| aggregate    | variable=s_axis_tx_meta compact=bit                 | ../../ipv6/ipv6.cpp:186 in ipv6_top, s_axis_tx_meta                                                  |
+| interface    | ap_none register port=reg_ip_address                | ../../ipv6/ipv6.cpp:187 in ipv6_top, reg_ip_address                                                  |
+| inline       |                                                     | ../../packet.hpp:159 in clear                                                                        |
+| inline       | off                                                 | ../../udp/udp.cpp:36 in process_udp                                                                  |
+| pipeline     | II=1                                                | ../../udp/udp.cpp:37 in process_udp                                                                  |
+| inline       | off                                                 | ../../udp/udp.cpp:86 in generate_udp                                                                 |
+| pipeline     | II=1                                                | ../../udp/udp.cpp:87 in generate_udp                                                                 |
+| pipeline     | II=1                                                | ../../udp/udp.cpp:163 in split_tx_meta                                                               |
+| inline       | off                                                 | ../../udp/udp.cpp:164 in split_tx_meta                                                               |
+| pipeline     | II=1                                                | ../../udp/udp.cpp:181 in merge_rx_meta                                                               |
+| inline       | off                                                 | ../../udp/udp.cpp:182 in merge_rx_meta                                                               |
+| inline       |                                                     | ../../udp/udp.cpp:211 in udp                                                                         |
+| stream       | depth=2 variable=rx_udp2shiftFifo                   | ../../udp/udp.cpp:220 in udp, rx_udp2shiftFifo                                                       |
+| stream       | depth=2 variable=rx_udpMetaFifo                     | ../../udp/udp.cpp:221 in udp, rx_udpMetaFifo                                                         |
+| aggregate    | variable=rx_udpMetaFifo compact=bit                 | ../../udp/udp.cpp:222 in udp, rx_udpMetaFifo                                                         |
+| stream       | depth=2 variable=tx_shift2udpFifo                   | ../../udp/udp.cpp:235 in udp, tx_shift2udpFifo                                                       |
+| stream       | depth=2 variable=tx_udp2shiftFifo                   | ../../udp/udp.cpp:236 in udp, tx_udp2shiftFifo                                                       |
+| stream       | depth=2 variable=tx_udpMetaFifo                     | ../../udp/udp.cpp:237 in udp, tx_udpMetaFifo                                                         |
+| dataflow     | disable_start_propagation                           | ../../udp/udp.cpp:258 in udp_top                                                                     |
+| interface    | ap_ctrl_none port=return                            | ../../udp/udp.cpp:259 in udp_top, return                                                             |
+| interface    | axis register port=s_axis_rx_meta                   | ../../udp/udp.cpp:261 in udp_top, s_axis_rx_meta                                                     |
+| interface    | axis register port=s_axis_rx_data                   | ../../udp/udp.cpp:262 in udp_top, s_axis_rx_data                                                     |
+| interface    | axis register port=m_axis_rx_meta                   | ../../udp/udp.cpp:263 in udp_top, m_axis_rx_meta                                                     |
+| interface    | axis register port=m_axis_rx_data                   | ../../udp/udp.cpp:264 in udp_top, m_axis_rx_data                                                     |
+| interface    | axis register port=s_axis_tx_meta                   | ../../udp/udp.cpp:265 in udp_top, s_axis_tx_meta                                                     |
+| interface    | axis register port=s_axis_tx_data                   | ../../udp/udp.cpp:266 in udp_top, s_axis_tx_data                                                     |
+| interface    | axis register port=m_axis_tx_meta                   | ../../udp/udp.cpp:267 in udp_top, m_axis_tx_meta                                                     |
+| interface    | axis register port=m_axis_tx_data                   | ../../udp/udp.cpp:268 in udp_top, m_axis_tx_data                                                     |
+| aggregate    | variable=s_axis_rx_meta compact=bit                 | ../../udp/udp.cpp:269 in udp_top, s_axis_rx_meta                                                     |
+| aggregate    | variable=m_axis_rx_meta compact=bit                 | ../../udp/udp.cpp:270 in udp_top, m_axis_rx_meta                                                     |
+| aggregate    | variable=s_axis_tx_meta compact=bit                 | ../../udp/udp.cpp:271 in udp_top, s_axis_tx_meta                                                     |
+| aggregate    | variable=m_axis_tx_meta compact=bit                 | ../../udp/udp.cpp:272 in udp_top, m_axis_tx_meta                                                     |
+| interface    | ap_none register port=reg_ip_address                | ../../udp/udp.cpp:273 in udp_top, reg_ip_address                                                     |
+| interface    | ap_none register port=reg_listen_port               | ../../udp/udp.cpp:274 in udp_top, reg_listen_port                                                    |
+| stream       | depth=2 variable=s_axis_rx_data_internal            | ../../udp/udp.cpp:277 in udp_top, s_axis_rx_data_internal                                            |
+| stream       | depth=2 variable=s_axis_tx_data_internal            | ../../udp/udp.cpp:279 in udp_top, s_axis_tx_data_internal                                            |
+| stream       | depth=2 variable=m_axis_rx_data_internal            | ../../udp/udp.cpp:281 in udp_top, m_axis_rx_data_internal                                            |
+| stream       | depth=2 variable=m_axis_tx_data_internal            | ../../udp/udp.cpp:283 in udp_top, m_axis_tx_data_internal                                            |
+| inline       | off                                                 | ../rocev2.cpp:44 in extract_icrc                                                                     |
+| pipeline     | II=1                                                | ../rocev2.cpp:45 in extract_icrc                                                                     |
+| inline       | off                                                 | ../rocev2.cpp:181 in mask_header_fields                                                              |
+| pipeline     | II=1                                                | ../rocev2.cpp:182 in mask_header_fields                                                              |
+| inline       | off                                                 | ../rocev2.cpp:237 in drop_invalid_crc                                                                |
+| pipeline     | II=1                                                | ../rocev2.cpp:238 in drop_invalid_crc                                                                |
+| inline       | off                                                 | ../rocev2.cpp:299 in compute_crc32                                                                   |
+| pipeline     | II=1                                                | ../rocev2.cpp:300 in compute_crc32                                                                   |
+| unroll       |                                                     | ../rocev2.cpp:324 in compute_crc32                                                                   |
+| unroll       |                                                     | ../rocev2.cpp:333 in compute_crc32                                                                   |
+| unroll       |                                                     | ../rocev2.cpp:346 in compute_crc32                                                                   |
+| unroll       |                                                     | ../rocev2.cpp:352 in compute_crc32                                                                   |
+| inline       | off                                                 | ../rocev2.cpp:384 in insert_icrc                                                                     |
+| pipeline     | II=1                                                | ../rocev2.cpp:385 in insert_icrc                                                                     |
+| inline       | off                                                 | ../rocev2.cpp:521 in round_robin_arbiter                                                             |
+| pipeline     | II=1                                                | ../rocev2.cpp:522 in round_robin_arbiter                                                             |
+| inline       | off                                                 | ../rocev2.cpp:550 in round_robin_merger                                                              |
+| pipeline     | II=1                                                | ../rocev2.cpp:551 in round_robin_merger                                                              |
+| inline       |                                                     | ../rocev2.cpp:601 in rocev2                                                                          |
+| stream       | depth=8 variable=rx_ipUdpMetaFifo                   | ../rocev2.cpp:606 in rocev2, rx_ipUdpMetaFifo                                                        |
+| stream       | depth=2 variable=tx_ipUdpMetaFifo                   | ../rocev2.cpp:607 in rocev2, tx_ipUdpMetaFifo                                                        |
+| stream       | depth=2 variable=rx_crc2ipFifo                      | ../rocev2.cpp:614 in rocev2, rx_crc2ipFifo                                                           |
+| stream       | depth=2 variable=rx_udp2ibFifo                      | ../rocev2.cpp:615 in rocev2, rx_udp2ibFifo                                                           |
+| stream       | depth=2 variable=tx_ib2udpFifo                      | ../rocev2.cpp:616 in rocev2, tx_ib2udpFifo                                                           |
+| stream       | depth=2 variable=tx_ip2crcFifo                      | ../rocev2.cpp:617 in rocev2, tx_ip2crcFifo                                                           |
+| stream       | depth=2 variable=rx_ip2udpMetaFifo                  | ../rocev2.cpp:624 in rocev2, rx_ip2udpMetaFifo                                                       |
+| stream       | depth=2 variable=rx_ip2udpFifo                      | ../rocev2.cpp:625 in rocev2, rx_ip2udpFifo                                                           |
+| stream       | depth=2 variable=tx_udp2ipMetaFifo                  | ../rocev2.cpp:626 in rocev2, tx_udp2ipMetaFifo                                                       |
+| stream       | depth=2 variable=tx_udp2ipFifo                      | ../rocev2.cpp:627 in rocev2, tx_udp2ipFifo                                                           |
+| dataflow     | disable_start_propagation                           | ../rocev2.cpp:788 in rocev2_top                                                                      |
+| interface    | ap_ctrl_none port=return                            | ../rocev2.cpp:789 in rocev2_top, return                                                              |
+| interface    | axis register port=s_axis_rx_data                   | ../rocev2.cpp:792 in rocev2_top, s_axis_rx_data                                                      |
+| interface    | axis register port=s_axis_tx_data                   | ../rocev2.cpp:793 in rocev2_top, s_axis_tx_data                                                      |
+| interface    | axis register port=s_axis_tx_data                   | ../rocev2.cpp:794 in rocev2_top, s_axis_tx_data                                                      |
+| interface    | axis register port=m_axis_tx_data                   | ../rocev2.cpp:796 in rocev2_top, m_axis_tx_data                                                      |
+| aggregate    | variable=s_axis_tx_meta compact=bit                 | ../rocev2.cpp:797 in rocev2_top, s_axis_tx_meta                                                      |
+| interface    | axis register port=m_axis_mem_write_cmd             | ../rocev2.cpp:800 in rocev2_top, m_axis_mem_write_cmd                                                |
+| interface    | axis register port=m_axis_mem_read_cmd              | ../rocev2.cpp:801 in rocev2_top, m_axis_mem_read_cmd                                                 |
+| interface    | axis register port=m_axis_mem_write_data            | ../rocev2.cpp:802 in rocev2_top, m_axis_mem_write_data                                               |
+| interface    | axis register port=s_axis_mem_read_data             | ../rocev2.cpp:803 in rocev2_top, s_axis_mem_read_data                                                |
+| interface    | axis register port=s_axis_qp_interface              | ../rocev2.cpp:806 in rocev2_top, s_axis_qp_interface                                                 |
+| interface    | axis register port=s_axis_qp_conn_interface         | ../rocev2.cpp:807 in rocev2_top, s_axis_qp_conn_interface                                            |
+| aggregate    | variable=s_axis_qp_interface compact=bit            | ../rocev2.cpp:808 in rocev2_top, s_axis_qp_interface                                                 |
+| aggregate    | variable=s_axis_qp_conn_interface compact=bit       | ../rocev2.cpp:809 in rocev2_top, s_axis_qp_conn_interface                                            |
+| interface    | ap_none register port=local_ip_address              | ../rocev2.cpp:819 in rocev2_top, local_ip_address                                                    |
+| interface    | ap_vld port=regCrcDropPkgCount                      | ../rocev2.cpp:822 in rocev2_top, regCrcDropPkgCount                                                  |
++--------------+-----------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+

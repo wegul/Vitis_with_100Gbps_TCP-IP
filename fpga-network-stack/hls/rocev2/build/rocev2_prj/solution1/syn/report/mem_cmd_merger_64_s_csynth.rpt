@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vitis HLS Report for 'mem_cmd_merger_64_s'
+================================================================
+* Date:           Tue Aug 15 18:30:19 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        rocev2_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  4.222 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        3|        3|  19.200 ns|  19.200 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     323|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      75|    -|
+|Register         |        -|     -|     455|      32|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     455|     430|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2940|  3600|  866400|  433200|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1513_fu_155_p2              |         +|   0|  0|  39|          32|           3|
+    |grp_fu_112_p2                     |         +|   0|  0|  39|          32|           3|
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op30_read_state2     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op40_write_state3    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op52_write_state3    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op60_write_state4    |       and|   0|  0|   2|           1|           1|
+    |tmp_i_258_nbreadreq_fu_84_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_70_p3          |       and|   0|  0|   2|           1|           0|
+    |icmp_ln1023_fu_199_p2             |      icmp|   0|  0|  29|          64|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4_io                |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter3  |        or|   0|  0|   2|           1|           1|
+    |or_ln1994_fu_236_p2               |        or|   0|  0|  93|          93|           1|
+    |or_ln1998_fu_255_p2               |        or|   0|  0|  93|          93|          33|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 323|         329|          55|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                 |   9|          2|    1|          2|
+    |m_axis_mem_read_cmd_TDATA_blk_n         |   9|          2|    1|          2|
+    |m_axis_mem_read_cmd_TDATA_int_regslice  |  13|          3|  192|        576|
+    |rx_remoteMemCmd_blk_n                   |   9|          2|    1|          2|
+    |tx_localMemCmdFifo_blk_n                |   9|          2|    1|          2|
+    |tx_pkgInfoFifo_blk_n                    |   9|          2|    1|          2|
+    |tx_pkgInfoFifo_din                      |  17|          4|   96|        384|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  75|         17|  293|        970|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |cmd_len_V_1_reg_314                |  32|   0|   32|          0|
+    |icmp_ln1023_reg_324                |   1|   0|    1|          0|
+    |icmp_ln1023_reg_324_pp0_iter2_reg  |   1|   0|    1|          0|
+    |tmp_2_reg_328                      |  96|   0|   96|          0|
+    |tmp_43_reg_295                     |   1|   0|    1|          0|
+    |tmp_43_reg_295_pp0_iter1_reg       |   1|   0|    1|          0|
+    |tmp_44_reg_319                     |   1|   0|    1|          0|
+    |tmp_i_258_reg_310                  |   1|   0|    1|          0|
+    |tmp_i_258_reg_310_pp0_iter2_reg    |   1|   0|    1|          0|
+    |tmp_i_reg_291                      |   1|   0|    1|          0|
+    |tmp_reg_300                        |  96|   0|   96|          0|
+    |tmp_reg_300_pp0_iter1_reg          |  96|   0|   96|          0|
+    |tmp_s_reg_305                      |  29|   0|   29|          0|
+    |tmp_s_reg_305_pp0_iter1_reg        |  29|   0|   29|          0|
+    |tmp_i_reg_291                      |  64|  32|    1|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 455|  32|  392|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+---------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++-----------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|   mem_cmd_merger<64>|  return value|
+|rx_remoteMemCmd_dout               |   in|  144|     ap_fifo|      rx_remoteMemCmd|       pointer|
+|rx_remoteMemCmd_num_data_valid     |   in|   10|     ap_fifo|      rx_remoteMemCmd|       pointer|
+|rx_remoteMemCmd_fifo_cap           |   in|   10|     ap_fifo|      rx_remoteMemCmd|       pointer|
+|rx_remoteMemCmd_empty_n            |   in|    1|     ap_fifo|      rx_remoteMemCmd|       pointer|
+|rx_remoteMemCmd_read               |  out|    1|     ap_fifo|      rx_remoteMemCmd|       pointer|
+|tx_localMemCmdFifo_dout            |   in|  144|     ap_fifo|   tx_localMemCmdFifo|       pointer|
+|tx_localMemCmdFifo_num_data_valid  |   in|    2|     ap_fifo|   tx_localMemCmdFifo|       pointer|
+|tx_localMemCmdFifo_fifo_cap        |   in|    2|     ap_fifo|   tx_localMemCmdFifo|       pointer|
+|tx_localMemCmdFifo_empty_n         |   in|    1|     ap_fifo|   tx_localMemCmdFifo|       pointer|
+|tx_localMemCmdFifo_read            |  out|    1|     ap_fifo|   tx_localMemCmdFifo|       pointer|
+|m_axis_mem_read_cmd_TREADY         |   in|    1|        axis|  m_axis_mem_read_cmd|       pointer|
+|m_axis_mem_read_cmd_TDATA          |  out|  192|        axis|  m_axis_mem_read_cmd|       pointer|
+|m_axis_mem_read_cmd_TVALID         |  out|    1|        axis|  m_axis_mem_read_cmd|       pointer|
+|tx_pkgInfoFifo_din                 |  out|   96|     ap_fifo|       tx_pkgInfoFifo|       pointer|
+|tx_pkgInfoFifo_num_data_valid      |   in|    8|     ap_fifo|       tx_pkgInfoFifo|       pointer|
+|tx_pkgInfoFifo_fifo_cap            |   in|    8|     ap_fifo|       tx_pkgInfoFifo|       pointer|
+|tx_pkgInfoFifo_full_n              |   in|    1|     ap_fifo|       tx_pkgInfoFifo|       pointer|
+|tx_pkgInfoFifo_write               |  out|    1|     ap_fifo|       tx_pkgInfoFifo|       pointer|
++-----------------------------------+-----+-----+------------+---------------------+--------------+
+
