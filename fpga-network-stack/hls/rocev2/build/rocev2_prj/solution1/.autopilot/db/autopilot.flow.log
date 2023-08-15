@@ -6756,3 +6756,95 @@ Command     csim_design done; error code: 2; 31.4 sec.
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 28.82 seconds. CPU system time: 2.58 seconds. Elapsed time: 31.4 seconds; current allocated memory: 0.000 MB.
 Command   ap_source done; error code: 1; 43.93 sec.
 Execute   cleanup_all 
+INFO-FLOW: Workspace /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1 opened at Tue Aug 15 18:46:28 EDT 2023
+Execute     ap_set_clock -name default -period 6.4 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.4ns.
+Execute     set_part xc7vx690t-ffg1761-2 
+Execute       create_platform xc7vx690t-ffg1761-2 -board  
+DBG:HLSDevice: Trying to load device library: /home/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7vx690t-ffg1761-2'
+Command       create_platform done; 2.22 sec.
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.32 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=0 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+Execute     config_interface -m_axi_latency=0 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -display_name {RoCEv2 Endpoint} 
+INFO: [HLS 200-1464] Running solution command: config_export -display_name {RoCEv2 Endpoint}
+Execute     config_export -display_name RoCEv2 Endpoint 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -ipname=rocev2 
+INFO: [HLS 200-1464] Running solution command: config_export -ipname=rocev2
+Execute     config_export -ipname=rocev2 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vendor=ethz.systems.fpga 
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=ethz.systems.fpga
+Execute     config_export -vendor=ethz.systems.fpga 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -version=0.82 
+INFO: [HLS 200-1464] Running solution command: config_export -version=0.82
+Execute     config_export -version=0.82 
+Command   open_solution done; 2.39 sec.
+Execute   set_part xc7vx690t-ffg1761-2 
+INFO: [HLS 200-1510] Running: set_part xc7vx690t-ffg1761-2 
+Execute     create_platform xc7vx690t-ffg1761-2 -board  
+Execute     source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.11 sec.
+Execute   create_clock -period 6.4 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 6.4 -name default 
+Execute   config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+Execute   config_export -display_name RoCEv2 Endpoint -format ip_catalog -ipname rocev2 -vendor ethz.systems.fpga -version 0.82 
+INFO: [HLS 200-1510] Running: config_export -display_name RoCEv2 Endpoint -format ip_catalog -ipname rocev2 -vendor ethz.systems.fpga -version 0.82 
+Execute   source ./rocev2_prj/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./rocev2_prj/solution1/directives.tcl
+Execute     set_directive_top -name rocev2_top rocev2_top 
+INFO: [HLS 200-1510] Running: set_directive_top -name rocev2_top rocev2_top 
+Execute   csim_design -argv /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/write_read_read_large_receiver.in /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/write_read_read_large_receiver.out /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rdma_txwriteread.in /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rdma_txwriteread.out -quiet 
+INFO: [HLS 200-1510] Running: csim_design -argv /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/write_read_read_large_receiver.in /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/write_read_read_large_receiver.out /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rdma_txwriteread.in /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rdma_txwriteread.out -quiet 
+Execute     source /home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build/rocev2_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 0.3 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.07 seconds. CPU system time: 0.25 seconds. Elapsed time: 0.3 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 12.87 sec.
+Execute cleanup_all 

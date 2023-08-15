@@ -20,7 +20,7 @@
         <library value="xilinx/virtex7/virtex7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="6.4"/>
+        <clock default="false" name="default" period="6.4"/>
     </clockList>
 </AutoPilot:solution>
 

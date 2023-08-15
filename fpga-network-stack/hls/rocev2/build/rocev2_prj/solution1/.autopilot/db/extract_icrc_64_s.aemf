@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1692138621215">
+  <ports id="1" name="s_axis_rx_data" type="PortType" coreId="265" bitwidth="128">
+    <dataOutputObjs>nbreadreq</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>nbreadreq</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="rx_crc2ipFifo" type="PortType" coreName="FIFO_SRL" coreId="1074228816" bitwidth="128" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="78" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="79" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="80" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="81" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="83" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="92" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="100" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.2"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.3"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.9/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.4"/>
+  <edges id="115" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.4"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.9/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.5"/>
+  <edges id="117" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.5"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.9/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.6"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.9/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.7"/>
+  <edges id="122" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.7"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.8"/>
+  <edges id="125" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="131" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="142" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="157" source_obj="//@regions.0/@basic_blocks.3/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="158" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.5"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.3/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.4/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.4/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="175" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.5"/>
+  <edges id="177" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.5"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.6"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="184" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="187" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="192" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.7/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.2"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.7/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.7/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.3"/>
+  <edges id="202" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.4"/>
+  <edges id="203" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.5"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="208" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="210" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="212" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="218" source_obj="//@regions.0/@basic_blocks.9/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="221" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="223" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="225" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.10/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.2"/>
+  <edges id="227" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.2"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.2"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.10/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="230" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="341" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="342" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="343" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="344" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="345" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="346" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="347" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="348" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="349" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="350" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="351" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="353" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="354" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="355" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="356" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="357" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="359" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="360" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.7"/>
+  <edges id="361" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.4"/>
+  <edges id="362" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.5"/>
+  <edges id="363" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="364" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.4"/>
+  <edges id="365" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="366" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="367" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="368" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.5"/>
+  <edges id="369" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="370" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="296" pipe_depth="2" RegionName="extract_icrc&lt;64>">
+    <basic_blocks id="18" name="entry" type="BlockType">
+      <controlOutputObjs>sw.bb.i</controlOutputObjs>
+      <controlOutputObjs>sw.bb19.i</controlOutputObjs>
+      <controlOutputObjs>sw.bb4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="ei_state_load" lineNumber="53" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1563899227" contextFuncName="extract_icrc_64_s" bitwidth="2" opcode="load" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="53" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="ei_prevWord_data_V_load" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1563899227" contextFuncName="extract_icrc_64_s" bitwidth="64" opcode="load" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="ei_prevWord_keep_V_load" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1563899227" contextFuncName="extract_icrc_64_s" bitwidth="8" opcode="load" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ei_prevWord_last_V_load" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1271705600" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln53" lineNumber="53" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1271842592" contextFuncName="extract_icrc_64_s" opcode="switch" m_display="0" m_delay="0.48" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="53" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <controlInputObjs>sw.bb.i</controlInputObjs>
+        <controlInputObjs>sw.bb19.i</controlInputObjs>
+        <controlInputObjs>sw.bb4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>53</validLinenumbers>
+        <validLinenumbers>87</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="21" name="sw.bb4.i" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>if.then6.i</controlOutputObjs>
+      <controlOutputObjs>sw.epilog99.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp_i_265" lineNumber="68" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="nbreadreq" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="68" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>s_axis_rx_data</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln68" lineNumber="68" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="68" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>nbreadreq</dataInputObjs>
+        <controlInputObjs>sw.epilog99.i</controlInputObjs>
+        <controlInputObjs>if.then6.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>68</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="27" name="if.then6.i" type="BlockType">
+      <controlInputObjs>sw.bb4.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>if.then10.i</controlOutputObjs>
+      <controlOutputObjs>if.end17.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="s_axis_rx_data_read_1" lineNumber="70" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="extract_icrc_64_s" bitwidth="128" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="70" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>s_axis_rx_data</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="currWord_data_V_20" lineNumber="70" originalName="currWord.data.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="currWord_data_V_20_fu_183_p1" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="64" opcode="trunc" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="70" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="currWord_keep_V_4" lineNumber="70" originalName="currWord.keep.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="ei_prevWord_keep_V" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="70" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="currWord_last_V_21" lineNumber="70" originalName="currWord.last.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="grp_fu_157_p3" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="70" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln71" lineNumber="71" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="71" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <controlInputObjs>if.end17.i</controlInputObjs>
+        <controlInputObjs>if.then10.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>71</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="34" name="if.then10.i" type="BlockType">
+      <controlInputObjs>if.then6.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>if.end17.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp" lineNumber="779" fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_fu_187_p3" coreId="1270079856" contextFuncName="operator_bool" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="779" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="operator bool"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="p_Result_s" lineNumber="779" originalName="__Result__" fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="p_Result_s_fu_195_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_bool" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="14" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="779" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="operator bool"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="or_ln73" lineNumber="73" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="or_ln73_fu_201_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="or" m_display="0" m_delay="0.48" m_topoIndex="15" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="73" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="select_ln73" lineNumber="73" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="select_ln73_fu_207_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="extract_icrc_64_s" bitwidth="2" opcode="select" m_display="0" m_delay="0.49" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="73" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="ei_state_write_ln80" lineNumber="80" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="80" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="br_ln86" lineNumber="86" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="86" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <controlInputObjs>if.end17.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>73</validLinenumbers>
+        <validLinenumbers>80</validLinenumbers>
+        <validLinenumbers>86</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h">
+        <validLinenumbers>779</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="42" name="if.end17.i" type="BlockType">
+      <controlInputObjs>if.then6.i</controlInputObjs>
+      <controlInputObjs>if.then10.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>sw.epilog99.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="ei_prevWord_last_V_loc_1_i" lineNumber="73" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="73" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <controlInputObjs>if.then10.i</controlInputObjs>
+        <controlInputObjs>if.then6.i</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tmp_267_i" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="tmp_267_i_fu_287_p4" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="73" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="zext_ln87" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="zext_ln87_fu_295_p1" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="128" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="rx_crc2ipFifo_write_ln87" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="extract_icrc_64_s" opcode="write" nodeLabel="1.0" m_display="0" m_delay="2.33" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>rx_crc2ipFifo</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="ei_prevWord_data_V_write_ln88" lineNumber="88" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="3122488409" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.84" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="88" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="ei_prevWord_keep_V_write_ln88" lineNumber="88" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="88" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln89" lineNumber="89" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="89" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <controlInputObjs>sw.epilog99.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>73</validLinenumbers>
+        <validLinenumbers>87</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+        <validLinenumbers>89</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="45" name="sw.bb19.i" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>sw.bb25.i</controlOutputObjs>
+      <controlOutputObjs>sw.epilog.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln93" lineNumber="93" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="icmp_ln93_fu_233_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.86" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="93" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln93" lineNumber="93" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="93" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>sw.epilog.i</controlInputObjs>
+        <controlInputObjs>sw.bb25.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>93</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="48" name="sw.bb25.i" type="BlockType">
+      <controlInputObjs>sw.bb19.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>sw.epilog.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="ei_prevWord_keep_V_write_ln345" lineNumber="345" fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." coreId="1274220720" contextFuncName="operator_assign" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="345" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="operator="/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="br_ln102" lineNumber="102" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1274083728" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="102" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <controlInputObjs>sw.epilog.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>102</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/home/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h">
+        <validLinenumbers>345</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="55" name="sw.epilog.i" type="BlockType">
+      <controlInputObjs>sw.bb19.i</controlInputObjs>
+      <controlInputObjs>sw.bb25.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>sw.epilog99.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="void_extract_icrc_64_hls_stream_net_axis_64_0_hls_stream_net_axis_64_0_ei_prevWord" lineNumber="87" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1271779984" contextFuncName="extract_icrc_64_s" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="87" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <controlInputObjs>sw.bb25.i</controlInputObjs>
+        <controlInputObjs>sw.bb19.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_266_i" lineNumber="160" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="tmp_266_i_fu_300_p4" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="73" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="160" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="zext_ln160" lineNumber="160" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="zext_ln160_fu_308_p1" coreId="3124332910" contextFuncName="extract_icrc_64_s" bitwidth="128" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="160" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="rx_crc2ipFifo_write_ln160" lineNumber="160" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="extract_icrc_64_s" opcode="write" nodeLabel="1.0" m_display="0" m_delay="2.33" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="160" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>rx_crc2ipFifo</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="ei_state_write_ln164" lineNumber="164" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="164" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="br_ln0" coreId="1270079856" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <controlInputObjs>sw.epilog99.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>87</validLinenumbers>
+        <validLinenumbers>160</validLinenumbers>
+        <validLinenumbers>164</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="58" name="sw.bb.i" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>if.then.i</controlOutputObjs>
+      <controlOutputObjs>sw.epilog99.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp_i" lineNumber="56" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="nbreadreq" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="56" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>s_axis_rx_data</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln56" lineNumber="56" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1272742912" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="56" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>nbreadreq</dataInputObjs>
+        <controlInputObjs>sw.epilog99.i</controlInputObjs>
+        <controlInputObjs>if.then.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>56</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="68" name="if.then.i" type="BlockType">
+      <controlInputObjs>sw.bb.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>sw.epilog99.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="s_axis_rx_data_read" lineNumber="58" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="extract_icrc_64_s" bitwidth="128" opcode="read" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="58" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>s_axis_rx_data</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="currWord_data_V" lineNumber="58" originalName="currWord.data.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="currWord_data_V_fu_251_p1" coreId="1073941152" contextFuncName="extract_icrc_64_s" bitwidth="64" opcode="trunc" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="58" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="currWord_keep_V" lineNumber="58" originalName="currWord.keep.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="ei_prevWord_keep_V" coreId="3123199975" contextFuncName="extract_icrc_64_s" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="58" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="currWord_last_V" lineNumber="58" originalName="currWord.last.V" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="grp_fu_157_p3" coreId="1270079856" contextFuncName="extract_icrc_64_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="58" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="ei_prevWord_data_V_write_ln59" lineNumber="59" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.84" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="59" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="ei_prevWord_keep_V_write_ln59" lineNumber="59" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1270079856" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="59" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="select_ln61" lineNumber="61" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." rtlName="select_ln61_fu_267_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="extract_icrc_64_s" bitwidth="2" opcode="select" m_display="0" m_delay="0.49" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="61" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="ei_state_write_ln61" lineNumber="61" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1273048016" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_delay="0.85" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="61" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln65" lineNumber="65" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="1274020256" contextFuncName="extract_icrc_64_s" opcode="br" m_display="0" m_delay="0.84" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="65" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <controlInputObjs>sw.epilog99.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>59</validLinenumbers>
+        <validLinenumbers>61</validLinenumbers>
+        <validLinenumbers>65</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="72" name="sw.epilog99.i" type="BlockType">
+      <controlInputObjs>sw.bb4.i</controlInputObjs>
+      <controlInputObjs>if.end17.i</controlInputObjs>
+      <controlInputObjs>sw.epilog.i</controlInputObjs>
+      <controlInputObjs>sw.bb.i</controlInputObjs>
+      <controlInputObjs>if.then.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>mergeST.i</controlOutputObjs>
+      <controlOutputObjs>extract_icrc&lt;64>.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="ei_prevWord_last_V_flag_2_i" coreId="1267902016" bitwidth="1" opcode="phi" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <dataOutputObjs>br</dataOutputObjs>
+        <controlInputObjs>sw.epilog.i</controlInputObjs>
+        <controlInputObjs>if.then.i</controlInputObjs>
+        <controlInputObjs>sw.bb.i</controlInputObjs>
+        <controlInputObjs>if.end17.i</controlInputObjs>
+        <controlInputObjs>sw.bb4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="ei_prevWord_last_V_new_2_i" originalName="currWord.last.V" coreId="1270079856" bitwidth="1" opcode="phi" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>sw.epilog.i</controlInputObjs>
+        <controlInputObjs>if.then.i</controlInputObjs>
+        <controlInputObjs>sw.bb.i</controlInputObjs>
+        <controlInputObjs>if.end17.i</controlInputObjs>
+        <controlInputObjs>sw.bb4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln0" coreId="3122488714" opcode="br" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <controlInputObjs>extract_icrc&lt;64>.exit</controlInputObjs>
+        <controlInputObjs>mergeST.i</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="75" name="mergeST.i" type="BlockType">
+      <controlInputObjs>sw.epilog99.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>extract_icrc&lt;64>.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="ei_prevWord_last_V_write_ln59" lineNumber="59" fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" fileDirectory=".." coreId="144" contextFuncName="extract_icrc_64_s" opcode="store" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp" linenumber="59" fileDirectory="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build" functionName="extract_icrc&amp;lt;64&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln0" coreId="1270079856" opcode="br" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <controlInputObjs>extract_icrc&lt;64>.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp">
+        <validLinenumbers>59</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="77" name="extract_icrc&lt;64>.exit" type="BlockType">
+      <controlInputObjs>sw.epilog99.i</controlInputObjs>
+      <controlInputObjs>mergeST.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln0" coreId="1270079856" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1"/>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="ei_prevWord_last_V_new_2_i_reg_109">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_prevWord_keep_V_load_reg_323">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_prevWord_last_V_flag_2_i_reg_89">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_i_265_reg_335">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln73_reg_342">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_state_load_reg_313">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_prevWord_last_V_load_reg_329">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_prevWord_last_V_loc_1_i_reg_127">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="ei_prevWord_data_V_load_reg_317">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="void_extract_icrc_64_hls_stream_net_axis_64_0_hls_stream_net_axis_64_0_ei_prevWord_reg_136">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp_fu_187">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="currWord_data_V_fu_251">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln61_fu_267">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="currWord_data_V_20_fu_183">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln73_fu_207">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln73_fu_201">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_195">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="void_extract_icrc_64_hls_stream_net_axis_64_0_hls_stream_net_axis_64_0_ei_prevWord_phi_fu_140">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln87_fu_295">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_267_i_fu_287">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ei_prevWord_last_V_new_2_i_phi_fu_112">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_157">
+    <nodeIds>25</nodeIds>
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln160_fu_308">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_147">
+    <nodeIds>24</nodeIds>
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln93_fu_233">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_266_i_fu_300">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ei_prevWord_last_V_flag_2_i_phi_fu_92">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ei_prevWord_last_V_loc_1_i_phi_fu_130">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="grp_nbreadreq_fu_68">
+    <nodeIds>19</nodeIds>
+    <nodeIds>56</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln59_store_fu_261">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln61_store_fu_275">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ei_prevWord_data_V_load_load_fu_171">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln59_store_fu_281">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln164_store_fu_245">
+    <nodeIds>53</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ei_prevWord_last_V_load_load_fu_179">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln59_store_fu_255">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln345_store_fu_239">
+    <nodeIds>46</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln88_store_fu_227">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_76">
+    <nodeIds>22</nodeIds>
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln88_store_fu_221">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ei_state_load_load_fu_167">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln80_store_fu_215">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ei_prevWord_keep_V_load_load_fu_175">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_82">
+    <nodeIds>38</nodeIds>
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <ioPorts name="rx_crc2ipFifo">
+    <contents name="write">
+      <nodeIds>38</nodeIds>
+      <nodeIds>52</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s_axis_rx_data">
+    <contents name="nbreadreq">
+      <nodeIds>56</nodeIds>
+      <nodeIds>19</nodeIds>
+    </contents>
+    <contents name="read">
+      <nodeIds>59</nodeIds>
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="extract_icrc_64_s" mII="1" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>18</basicBlocks>
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>34</basicBlocks>
+      <basicBlocks>42</basicBlocks>
+      <basicBlocks>45</basicBlocks>
+      <basicBlocks>48</basicBlocks>
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>58</basicBlocks>
+      <basicBlocks>68</basicBlocks>
+      <basicBlocks>72</basicBlocks>
+      <basicBlocks>75</basicBlocks>
+      <basicBlocks>77</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

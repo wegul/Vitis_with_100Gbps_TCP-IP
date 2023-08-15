@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="rocev2.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/rocev2.cpp"/>
+    <originFiles name="msn_table.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/msn_table.cpp"/>
+    <originFiles name="conn_table.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/conn_table.cpp"/>
+    <originFiles name="state_table.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/state_table.cpp"/>
+    <originFiles name="retransmitter.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/retransmitter/retransmitter.cpp"/>
+    <originFiles name="transport_timer.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/transport_timer.cpp"/>
+    <originFiles name="read_req_table.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/read_req_table.cpp"/>
+    <originFiles name="ib_transport_protocol.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_transport_protocol.cpp"/>
+    <originFiles name="ib_utils.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ib_transport_protocol/ib_utils.cpp"/>
+    <originFiles name="udp.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../udp/udp.cpp"/>
+    <originFiles name="ipv6.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ipv6/ipv6.cpp"/>
+    <originFiles name="ipv4.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ipv4/ipv4.cpp"/>
+    <originFiles name="ipv4_utils.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../ipv4/ipv4_utils.cpp"/>
+    <originFiles name="axi_utils.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/../axi_utils.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_rocev2.cpp" path="/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/test_rocev2.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

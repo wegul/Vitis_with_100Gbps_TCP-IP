@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../test_rocev2.cpp ../../../../../rocev2.cpp ../../../../../../ib_transport_protocol/msn_table.cpp ../../../../../../ib_transport_protocol/conn_table.cpp ../../../../../../ib_transport_protocol/state_table.cpp ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp ../../../../../../ib_transport_protocol/transport_timer.cpp ../../../../../../ib_transport_protocol/read_req_table.cpp ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp ../../../../../../ib_transport_protocol/ib_utils.cpp ../../../../../../udp/udp.cpp ../../../../../../ipv6/ipv6.cpp ../../../../../../ipv4/ipv4.cpp ../../../../../../ipv4/ipv4_utils.cpp ../../../../../../axi_utils.cpp
+HLS_SOURCES = ../../../../../test_rocev2.cpp ../../../../../../axi_utils.cpp ../../../../../../ipv4/ipv4_utils.cpp ../../../../../../ipv4/ipv4.cpp ../../../../../../ipv6/ipv6.cpp ../../../../../../udp/udp.cpp ../../../../../../ib_transport_protocol/ib_utils.cpp ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp ../../../../../../ib_transport_protocol/read_req_table.cpp ../../../../../../ib_transport_protocol/transport_timer.cpp ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp ../../../../../../ib_transport_protocol/state_table.cpp ../../../../../../ib_transport_protocol/conn_table.cpp ../../../../../../ib_transport_protocol/msn_table.cpp ../../../../../rocev2.cpp
 
 override TARGET := csim.exe
 
@@ -75,81 +75,15 @@ all: $(TARGET)
 
 $(ObjDir)/test_rocev2.o: ../../../../../test_rocev2.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../test_rocev2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/test_rocev2.d
 
-$(ObjDir)/rocev2.o: ../../../../../rocev2.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../rocev2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/axi_utils.o: ../../../../../../axi_utils.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../axi_utils.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/rocev2.d
-
-$(ObjDir)/msn_table.o: ../../../../../../ib_transport_protocol/msn_table.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/msn_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/msn_table.d
-
-$(ObjDir)/conn_table.o: ../../../../../../ib_transport_protocol/conn_table.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/conn_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/conn_table.d
-
-$(ObjDir)/state_table.o: ../../../../../../ib_transport_protocol/state_table.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/state_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/state_table.d
-
-$(ObjDir)/retransmitter.o: ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/retransmitter.d
-
-$(ObjDir)/transport_timer.o: ../../../../../../ib_transport_protocol/transport_timer.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/transport_timer.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/transport_timer.d
-
-$(ObjDir)/read_req_table.o: ../../../../../../ib_transport_protocol/read_req_table.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/read_req_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/read_req_table.d
-
-$(ObjDir)/ib_transport_protocol.o: ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/ib_transport_protocol.d
-
-$(ObjDir)/ib_utils.o: ../../../../../../ib_transport_protocol/ib_utils.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/ib_utils.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/ib_utils.d
-
-$(ObjDir)/udp.o: ../../../../../../udp/udp.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../udp/udp.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/udp.d
-
-$(ObjDir)/ipv6.o: ../../../../../../ipv6/ipv6.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ipv6/ipv6.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/ipv6.d
-
-$(ObjDir)/ipv4.o: ../../../../../../ipv4/ipv4.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../ipv4/ipv4.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/ipv4.d
+-include $(ObjDir)/axi_utils.d
 
 $(ObjDir)/ipv4_utils.o: ../../../../../../ipv4/ipv4_utils.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../../ipv4/ipv4_utils.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -157,8 +91,74 @@ $(ObjDir)/ipv4_utils.o: ../../../../../../ipv4/ipv4_utils.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/ipv4_utils.d
 
-$(ObjDir)/axi_utils.o: ../../../../../../axi_utils.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../axi_utils.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/ipv4.o: ../../../../../../ipv4/ipv4.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ipv4/ipv4.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/axi_utils.d
+-include $(ObjDir)/ipv4.d
+
+$(ObjDir)/ipv6.o: ../../../../../../ipv6/ipv6.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ipv6/ipv6.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/ipv6.d
+
+$(ObjDir)/udp.o: ../../../../../../udp/udp.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../udp/udp.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/udp.d
+
+$(ObjDir)/ib_utils.o: ../../../../../../ib_transport_protocol/ib_utils.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/ib_utils.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/ib_utils.d
+
+$(ObjDir)/ib_transport_protocol.o: ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/ib_transport_protocol.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/ib_transport_protocol.d
+
+$(ObjDir)/read_req_table.o: ../../../../../../ib_transport_protocol/read_req_table.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/read_req_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/read_req_table.d
+
+$(ObjDir)/transport_timer.o: ../../../../../../ib_transport_protocol/transport_timer.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/transport_timer.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/transport_timer.d
+
+$(ObjDir)/retransmitter.o: ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/retransmitter/retransmitter.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/retransmitter.d
+
+$(ObjDir)/state_table.o: ../../../../../../ib_transport_protocol/state_table.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/state_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/state_table.d
+
+$(ObjDir)/conn_table.o: ../../../../../../ib_transport_protocol/conn_table.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/conn_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/conn_table.d
+
+$(ObjDir)/msn_table.o: ../../../../../../ib_transport_protocol/msn_table.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../../ib_transport_protocol/msn_table.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/msn_table.d
+
+$(ObjDir)/rocev2.o: ../../../../../rocev2.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../rocev2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/weigao/Desktop/Vitis_with_100Gbps_TCP-IP/fpga-network-stack/hls/rocev2/build  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/rocev2.d
