@@ -792,7 +792,7 @@ void rocev2_top(	//stream<ipUdpMeta>&	s_axis_rx_meta,
 	#pragma HLS INTERFACE axis register port=s_axis_rx_data
 	#pragma HLS INTERFACE axis register port=s_axis_tx_data
 	#pragma HLS INTERFACE axis register port=s_axis_tx_data
-	#pragma HLS INTERFACE axis register port=m_axis_tx_meta
+	// #pragma HLS INTERFACE axis register port=m_axis_tx_meta
 	#pragma HLS INTERFACE axis register port=m_axis_tx_data
 	#pragma HLS aggregate  variable=s_axis_tx_meta compact=bit
 
